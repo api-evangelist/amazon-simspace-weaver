@@ -8,11 +8,11 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
+  - AWS
+  - Defense
+  - Digital Twin
   - Simulation
   - Spatial Simulation
-  - Digital Twin
-  - Defense
-  - AWS
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -28,9 +28,9 @@ apis:
     humanURL: https://aws.amazon.com/simspace-weaver/
     baseURL: https://simspaceweaver.amazonaws.com
     tags:
+      - Digital Twin
       - Simulation
       - Spatial Simulation
-      - Digital Twin
     properties:
       - type: Documentation
         url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/API_Reference.html
