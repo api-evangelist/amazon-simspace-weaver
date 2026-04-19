@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-list-apps-output-structure.json",
+  "name": "ListAppsOutput",
+  "description": "ListAppsOutput schema from Amazon SimSpace Weaver API",
+  "properties": {
+    "Apps": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationAppList"
+        },
+        {
+          "description": "The list of apps for the given simulation and domain."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OptionalString"
+        },
+        {
+          "description": "If SimSpace Weaver returns <code>nextToken</code>, then there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. To retrieve the next page, call the operation again using the returned token. Keep all other arguments unchanged. If no results remain, then <code>nextToken</code> is set to <code>null</code>. Each pagination token expires after 24 hours. If you provide a token that isn't valid, then you receive an <i>HTTP 400 ValidationException</i> error."
+        }
+      ]
+    }
+  }
+}

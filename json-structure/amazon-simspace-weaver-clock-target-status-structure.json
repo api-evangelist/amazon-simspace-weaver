@@ -1,0 +1,12 @@
+{
+  "type": "string",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-clock-target-status-structure.json",
+  "name": "ClockTargetStatus",
+  "description": "ClockTargetStatus schema from Amazon SimSpace Weaver API",
+  "enum": [
+    "UNKNOWN",
+    "STARTED",
+    "STOPPED"
+  ]
+}

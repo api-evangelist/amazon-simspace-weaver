@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-live-simulation-state-structure.json",
+  "name": "LiveSimulationState",
+  "description": "A collection of additional state information, such as domain and clock configuration.",
+  "properties": {
+    "Clocks": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationClockList"
+        },
+        {
+          "description": "<p>A list of simulation clocks.</p> <note> <p>At this time, a simulation has only one clock.</p> </note>"
+        }
+      ]
+    },
+    "Domains": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DomainList"
+        },
+        {
+          "description": "A list of domains for the simulation. For more information about domains, see <a href=\"https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is_key-concepts.html#what-is_key-concepts_domains\">Key concepts: Domains</a> in the <i>SimSpace Weaver User Guide</i>."
+        }
+      ]
+    }
+  }
+}

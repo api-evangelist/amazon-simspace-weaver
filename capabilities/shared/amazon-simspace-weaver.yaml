@@ -1,0 +1,241 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon SimSpace Weaver API
+  description: Amazon SimSpace Weaver API for cloud resource management.
+  tags:
+  - AWS
+  - Simulation
+  - Cloud Computing
+  - Spatial Computing
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-simspace-weaver
+    baseUri: https://simspaceweaver.{region}.amazonaws.com
+    description: Amazon SimSpace Weaver REST API.
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{AWS_SIGNATURE_V4}}'
+      placement: header
+    resources:
+    - name: simulations
+      path: /simulations
+      description: Simulations operations
+      operations:
+      - name: startsimulation
+        method: POST
+        description: StartSimulation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: stopsimulation
+        method: POST
+        description: StopSimulation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletesimulation
+        method: POST
+        description: DeleteSimulation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: describesimulation
+        method: POST
+        description: DescribeSimulation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: listsimulations
+        method: POST
+        description: ListSimulations
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: apps
+      path: /apps
+      description: Apps operations
+      operations:
+      - name: startapp
+        method: POST
+        description: StartApp
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: stopapp
+        method: POST
+        description: StopApp
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: describeapp
+        method: POST
+        description: DescribeApp
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: listapps
+        method: POST
+        description: ListApps
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: clocks
+      path: /clocks
+      description: Clocks operations
+      operations:
+      - name: startclock
+        method: POST
+        description: StartClock
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: stopclock
+        method: POST
+        description: StopClock
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: pauseclock
+        method: POST
+        description: PauseClock
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: describesimulation
+        method: POST
+        description: DescribeSimulation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: amazon-simspace-weaver-rest
+    resources:
+    - path: /v1/simulations
+      name: simulations
+      description: Simulations operations
+      operations:
+      - method: GET
+        name: list-simulations
+        description: List Simulations
+        call: amazon-simspace-weaver.startsimulation
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/apps
+      name: apps
+      description: Apps operations
+      operations:
+      - method: GET
+        name: list-apps
+        description: List Apps
+        call: amazon-simspace-weaver.startapp
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/clocks
+      name: clocks
+      description: Clocks operations
+      operations:
+      - method: GET
+        name: list-clocks
+        description: List Clocks
+        call: amazon-simspace-weaver.startclock
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: amazon-simspace-weaver-mcp
+    transport: http
+    description: MCP server for AI-assisted Amazon SimSpace Weaver management.
+    tools:
+    - name: list-simulations
+      description: List all SimSpace Weaver simulations
+      hints:
+        readOnly: true
+      call: amazon-simspaceweaver.listsimulations
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: start-simulation
+      description: Start a new simulation
+      hints:
+        readOnly: false
+        idempotent: false
+      call: amazon-simspaceweaver.startsimulation
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: stop-simulation
+      description: Stop a running simulation
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-simspaceweaver.stopsimulation
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: describe-simulation
+      description: Get simulation details
+      hints:
+        readOnly: true
+      call: amazon-simspaceweaver.describesimulation
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-apps
+      description: List apps in a simulation
+      hints:
+        readOnly: true
+      call: amazon-simspaceweaver.listapps
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: start-app
+      description: Start an app in a simulation
+      hints:
+        readOnly: false
+        idempotent: false
+      call: amazon-simspaceweaver.startapp
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-schema/amazon-simspace-weaver-simulation-clock-schema.json",
+  "title": "SimulationClock",
+  "description": "Status information about the simulation clock.",
+  "type": "object",
+  "properties": {
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClockStatus"
+        },
+        {
+          "description": "The current status of the simulation clock."
+        }
+      ]
+    },
+    "TargetStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClockTargetStatus"
+        },
+        {
+          "description": "The desired status of the simulation clock."
+        }
+      ]
+    }
+  }
+}

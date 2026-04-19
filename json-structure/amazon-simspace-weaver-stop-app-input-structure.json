@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-stop-app-input-structure.json",
+  "name": "StopAppInput",
+  "description": "StopAppInput schema from Amazon SimSpace Weaver API",
+  "properties": {
+    "App": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverResourceName"
+        },
+        {
+          "description": "The name of the app."
+        }
+      ]
+    },
+    "Domain": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverResourceName"
+        },
+        {
+          "description": "The name of the domain of the app."
+        }
+      ]
+    },
+    "Simulation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverResourceName"
+        },
+        {
+          "description": "The name of the simulation of the app."
+        }
+      ]
+    }
+  },
+  "required": [
+    "App",
+    "Domain",
+    "Simulation"
+  ]
+}

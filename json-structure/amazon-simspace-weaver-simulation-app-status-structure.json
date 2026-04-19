@@ -1,0 +1,15 @@
+{
+  "type": "string",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-simulation-app-status-structure.json",
+  "name": "SimulationAppStatus",
+  "description": "SimulationAppStatus schema from Amazon SimSpace Weaver API",
+  "enum": [
+    "STARTING",
+    "STARTED",
+    "STOPPING",
+    "STOPPED",
+    "ERROR",
+    "UNKNOWN"
+  ]
+}

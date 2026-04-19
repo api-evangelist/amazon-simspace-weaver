@@ -1,0 +1,13 @@
+{
+  "type": "string",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-lifecycle-management-strategy-structure.json",
+  "name": "LifecycleManagementStrategy",
+  "description": "LifecycleManagementStrategy schema from Amazon SimSpace Weaver API",
+  "enum": [
+    "Unknown",
+    "PerWorker",
+    "BySpatialSubdivision",
+    "ByRequest"
+  ]
+}

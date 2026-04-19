@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-tag-map-structure.json",
+  "name": "TagMap",
+  "description": "TagMap schema from Amazon SimSpace Weaver API",
+  "additionalProperties": {
+    "$ref": "#/components/schemas/TagValue"
+  }
+}

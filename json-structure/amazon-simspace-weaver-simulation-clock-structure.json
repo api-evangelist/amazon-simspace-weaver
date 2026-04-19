@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-simulation-clock-structure.json",
+  "name": "SimulationClock",
+  "description": "Status information about the simulation clock.",
+  "properties": {
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClockStatus"
+        },
+        {
+          "description": "The current status of the simulation clock."
+        }
+      ]
+    },
+    "TargetStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClockTargetStatus"
+        },
+        {
+          "description": "The desired status of the simulation clock."
+        }
+      ]
+    }
+  }
+}

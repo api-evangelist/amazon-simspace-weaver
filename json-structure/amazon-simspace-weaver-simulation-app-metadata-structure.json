@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-simulation-app-metadata-structure.json",
+  "name": "SimulationAppMetadata",
+  "description": "A collection of metadata about the app.",
+  "properties": {
+    "Domain": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverResourceName"
+        },
+        {
+          "description": "The domain of the app. For more information about domains, see <a href=\"https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is_key-concepts.html#what-is_key-concepts_domains\">Key concepts: Domains</a> in the <i>SimSpace Weaver User Guide</i>."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverLongResourceName"
+        },
+        {
+          "description": "The name of the app."
+        }
+      ]
+    },
+    "Simulation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverResourceName"
+        },
+        {
+          "description": "The name of the simulation of the app."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationAppStatus"
+        },
+        {
+          "description": "The current status of the app."
+        }
+      ]
+    },
+    "TargetStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationAppTargetStatus"
+        },
+        {
+          "description": "The desired status of the app."
+        }
+      ]
+    }
+  }
+}

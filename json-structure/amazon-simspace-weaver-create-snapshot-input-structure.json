@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-create-snapshot-input-structure.json",
+  "name": "CreateSnapshotInput",
+  "description": "CreateSnapshotInput schema from Amazon SimSpace Weaver API",
+  "properties": {
+    "Destination": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Destination"
+        },
+        {
+          "description": "<p>The Amazon S3 bucket and optional folder (object key prefix) where SimSpace Weaver creates the snapshot file.</p> <p>The Amazon S3 bucket must be in the same Amazon Web Services Region as the simulation.</p>"
+        }
+      ]
+    },
+    "Simulation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverResourceName"
+        },
+        {
+          "description": "The name of the simulation."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Destination",
+    "Simulation"
+  ]
+}

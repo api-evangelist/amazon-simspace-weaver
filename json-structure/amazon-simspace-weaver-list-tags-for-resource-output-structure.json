@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-list-tags-for-resource-output-structure.json",
+  "name": "ListTagsForResourceOutput",
+  "description": "ListTagsForResourceOutput schema from Amazon SimSpace Weaver API",
+  "properties": {
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "description": "The list of tags for the resource."
+        }
+      ]
+    }
+  }
+}

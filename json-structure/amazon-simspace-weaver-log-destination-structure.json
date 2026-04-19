@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-log-destination-structure.json",
+  "name": "LogDestination",
+  "description": "The location where SimSpace Weaver sends simulation log data.",
+  "properties": {
+    "CloudWatchLogsLogGroup": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CloudWatchLogsLogGroup"
+        },
+        {
+          "description": "An Amazon CloudWatch Logs log group that stores simulation log data. For more information about log groups, see <a href=\"https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html\">Working with log groups and log streams</a> in the <i>Amazon CloudWatch Logs User Guide</i>."
+        }
+      ]
+    }
+  }
+}

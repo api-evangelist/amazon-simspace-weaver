@@ -1,0 +1,10 @@
+{
+  "ClientToken": "example-value",
+  "Description": "example-value",
+  "MaximumDuration": "example-value",
+  "Name": "MyResource",
+  "RoleArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "SchemaS3Location": "example-value",
+  "SnapshotS3Location": "example-value",
+  "Tags": "example-value"
+}

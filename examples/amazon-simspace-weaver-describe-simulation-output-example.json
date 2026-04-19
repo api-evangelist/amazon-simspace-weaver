@@ -1,0 +1,17 @@
+{
+  "Arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "CreationTime": "example-value",
+  "Description": "example-value",
+  "ExecutionId": "example-value",
+  "LiveSimulationState": "example-value",
+  "LoggingConfiguration": "example-value",
+  "MaximumDuration": "example-value",
+  "Name": "MyResource",
+  "RoleArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "SchemaError": "example-value",
+  "SchemaS3Location": "example-value",
+  "SnapshotS3Location": "example-value",
+  "StartError": "example-value",
+  "Status": "Active",
+  "TargetStatus": "Active"
+}

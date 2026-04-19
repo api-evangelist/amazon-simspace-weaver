@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-schema/amazon-simspace-weaver-simulation-app-status-schema.json",
+  "title": "SimulationAppStatus",
+  "description": "SimulationAppStatus schema from Amazon SimSpace Weaver API",
+  "type": "string",
+  "enum": [
+    "STARTING",
+    "STARTED",
+    "STOPPING",
+    "STOPPED",
+    "ERROR",
+    "UNKNOWN"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-delete-app-input-structure.json",
+  "name": "DeleteAppInput",
+  "description": "DeleteAppInput schema from Amazon SimSpace Weaver API",
+  "properties": {}
+}

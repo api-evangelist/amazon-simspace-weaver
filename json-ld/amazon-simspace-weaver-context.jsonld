@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "aws": "https://amazonaws.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "CloudWatchLogsLogGroup": {
+      "@id": "aws:CloudWatchLogsLogGroup",
+      "@type": "xsd:string"
+    },
+    "LiveSimulationState": {
+      "@id": "aws:LiveSimulationState",
+      "@type": "xsd:string"
+    },
+    "StartAppInput": "aws:StartAppInput",
+    "ListTagsForResourceOutput": "aws:ListTagsForResourceOutput",
+    "StopClockInput": "aws:StopClockInput",
+    "ListSimulationsInput": "aws:ListSimulationsInput",
+    "SimulationMetadata": "aws:SimulationMetadata",
+    "CreateSnapshotInput": "aws:CreateSnapshotInput",
+    "DeleteSimulationInput": "aws:DeleteSimulationInput",
+    "StartSimulationInput": "aws:StartSimulationInput",
+    "TagMap": "aws:TagMap",
+    "TagResourceInput": "aws:TagResourceInput",
+    "DeleteAppInput": "aws:DeleteAppInput",
+    "SimulationClock": "aws:SimulationClock",
+    "DescribeSimulationOutput": "aws:DescribeSimulationOutput",
+    "CreateSnapshotOutput": "aws:CreateSnapshotOutput",
+    "ListAppsInput": "aws:ListAppsInput",
+    "Domain": {
+      "@id": "aws:Domain",
+      "@type": "xsd:string"
+    },
+    "StartClockInput": "aws:StartClockInput",
+    "StartSimulationOutput": "aws:StartSimulationOutput",
+    "UntagResourceOutput": "aws:UntagResourceOutput",
+    "StopSimulationOutput": "aws:StopSimulationOutput",
+    "SimulationAppPortMapping": "aws:SimulationAppPortMapping",
+    "SimulationAppMetadata": "aws:SimulationAppMetadata",
+    "StartClockOutput": "aws:StartClockOutput",
+    "SimulationAppEndpointInfo": "aws:SimulationAppEndpointInfo",
+    "DeleteSimulationOutput": "aws:DeleteSimulationOutput",
+    "DeleteAppOutput": "aws:DeleteAppOutput",
+    "StopClockOutput": "aws:StopClockOutput",
+    "StartAppOutput": "aws:StartAppOutput",
+    "StopAppOutput": "aws:StopAppOutput",
+    "LogDestination": "aws:LogDestination",
+    "ListAppsOutput": "aws:ListAppsOutput",
+    "ListSimulationsOutput": "aws:ListSimulationsOutput",
+    "StopSimulationInput": "aws:StopSimulationInput",
+    "LoggingConfiguration": {
+      "@id": "aws:LoggingConfiguration",
+      "@type": "xsd:string"
+    },
+    "TagResourceOutput": "aws:TagResourceOutput",
+    "DescribeAppOutput": "aws:DescribeAppOutput",
+    "LaunchOverrides": {
+      "@id": "aws:LaunchOverrides",
+      "@type": "xsd:string"
+    },
+    "S3Destination": "aws:S3Destination",
+    "UntagResourceInput": "aws:UntagResourceInput",
+    "S3Location": "aws:S3Location",
+    "DescribeAppInput": "aws:DescribeAppInput",
+    "StopAppInput": "aws:StopAppInput",
+    "DescribeSimulationInput": "aws:DescribeSimulationInput",
+    "ListTagsForResourceInput": "aws:ListTagsForResourceInput",
+    "LogGroupArn": {
+      "@id": "aws:LogGroupArn",
+      "@type": "xsd:string"
+    },
+    "Clocks": {
+      "@id": "aws:Clocks",
+      "@type": "xsd:string"
+    },
+    "Domains": {
+      "@id": "aws:Domains",
+      "@type": "xsd:string"
+    },
+    "ClientToken": {
+      "@id": "aws:ClientToken",
+      "@type": "xsd:string"
+    },
+    "Description": "schema:description",
+    "Name": "schema:name",
+    "Simulation": {
+      "@id": "aws:Simulation",
+      "@type": "xsd:string"
+    },
+    "Tags": {
+      "@id": "aws:Tags",
+      "@type": "xsd:string"
+    },
+    "Arn": {
+      "@id": "aws:Arn",
+      "@type": "xsd:string"
+    },
+    "CreationTime": {
+      "@id": "aws:CreationTime",
+      "@type": "xsd:string"
+    },
+    "Status": {
+      "@id": "aws:Status",
+      "@type": "xsd:string"
+    },
+    "TargetStatus": {
+      "@id": "aws:TargetStatus",
+      "@type": "xsd:string"
+    },
+    "Destination": {
+      "@id": "aws:Destination",
+      "@type": "xsd:string"
+    },
+    "MaximumDuration": {
+      "@id": "aws:MaximumDuration",
+      "@type": "xsd:string"
+    },
+    "RoleArn": {
+      "@id": "aws:RoleArn",
+      "@type": "xsd:string"
+    },
+    "SchemaS3Location": {
+      "@id": "aws:SchemaS3Location",
+      "@type": "xsd:string"
+    },
+    "SnapshotS3Location": {
+      "@id": "aws:SnapshotS3Location",
+      "@type": "xsd:string"
+    },
+    "ExecutionId": {
+      "@id": "aws:ExecutionId",
+      "@type": "xsd:string"
+    },
+    "SchemaError": {
+      "@id": "aws:SchemaError",
+      "@type": "xsd:string"
+    },
+    "StartError": {
+      "@id": "aws:StartError",
+      "@type": "xsd:string"
+    },
+    "Lifecycle": {
+      "@id": "aws:Lifecycle",
+      "@type": "xsd:string"
+    },
+    "Actual": {
+      "@id": "aws:Actual",
+      "@type": "xsd:string"
+    },
+    "Declared": {
+      "@id": "aws:Declared",
+      "@type": "xsd:string"
+    },
+    "Address": {
+      "@id": "aws:Address",
+      "@type": "xsd:string"
+    },
+    "IngressPortMappings": {
+      "@id": "aws:IngressPortMappings",
+      "@type": "xsd:string"
+    },
+    "Apps": {
+      "@id": "aws:Apps",
+      "@type": "xsd:string"
+    },
+    "NextToken": {
+      "@id": "aws:NextToken",
+      "@type": "xsd:string"
+    },
+    "Simulations": {
+      "@id": "aws:Simulations",
+      "@type": "xsd:string"
+    },
+    "Destinations": {
+      "@id": "aws:Destinations",
+      "@type": "xsd:string"
+    },
+    "EndpointInfo": {
+      "@id": "aws:EndpointInfo",
+      "@type": "xsd:string"
+    },
+    "LaunchCommands": {
+      "@id": "aws:LaunchCommands",
+      "@type": "xsd:string"
+    },
+    "BucketName": {
+      "@id": "aws:BucketName",
+      "@type": "xsd:string"
+    },
+    "ObjectKeyPrefix": {
+      "@id": "aws:ObjectKeyPrefix",
+      "@type": "xsd:string"
+    },
+    "ObjectKey": {
+      "@id": "aws:ObjectKey",
+      "@type": "xsd:string"
+    },
+    "App": {
+      "@id": "aws:App",
+      "@type": "xsd:string"
+    }
+  }
+}

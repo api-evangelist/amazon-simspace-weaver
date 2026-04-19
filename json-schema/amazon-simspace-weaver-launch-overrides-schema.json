@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-schema/amazon-simspace-weaver-launch-overrides-schema.json",
+  "title": "LaunchOverrides",
+  "description": "Options that apply when the app starts. These options override default behavior.",
+  "type": "object",
+  "properties": {
+    "LaunchCommands": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LaunchCommandList"
+        },
+        {
+          "description": "App launch commands and command line parameters that override the launch command configured in the simulation schema."
+        }
+      ]
+    }
+  }
+}

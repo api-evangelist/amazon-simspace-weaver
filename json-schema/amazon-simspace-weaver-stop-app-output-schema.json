@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-schema/amazon-simspace-weaver-stop-app-output-schema.json",
+  "title": "StopAppOutput",
+  "description": "StopAppOutput schema from Amazon SimSpace Weaver API",
+  "type": "object",
+  "properties": {}
+}

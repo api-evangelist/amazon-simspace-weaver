@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-start-app-output-structure.json",
+  "name": "StartAppOutput",
+  "description": "StartAppOutput schema from Amazon SimSpace Weaver API",
+  "properties": {
+    "Domain": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverResourceName"
+        },
+        {
+          "description": "The name of the domain of the app."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverResourceName"
+        },
+        {
+          "description": "The name of the app."
+        }
+      ]
+    },
+    "Simulation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverResourceName"
+        },
+        {
+          "description": "The name of the simulation of the app."
+        }
+      ]
+    }
+  }
+}

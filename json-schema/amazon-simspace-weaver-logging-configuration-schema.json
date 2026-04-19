@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-schema/amazon-simspace-weaver-logging-configuration-schema.json",
+  "title": "LoggingConfiguration",
+  "description": "The logging configuration for a simulation.",
+  "type": "object",
+  "properties": {
+    "Destinations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LogDestinations"
+        },
+        {
+          "description": "A list of the locations where SimSpace Weaver sends simulation log data."
+        }
+      ]
+    }
+  }
+}

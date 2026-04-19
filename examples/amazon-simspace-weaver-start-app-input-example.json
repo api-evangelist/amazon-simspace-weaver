@@ -1,0 +1,8 @@
+{
+  "ClientToken": "example-value",
+  "Description": "example-value",
+  "Domain": "example-value",
+  "LaunchOverrides": "example-value",
+  "Name": "MyResource",
+  "Simulation": "example-value"
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-schema/amazon-simspace-weaver-list-simulations-output-schema.json",
+  "title": "ListSimulationsOutput",
+  "description": "ListSimulationsOutput schema from Amazon SimSpace Weaver API",
+  "type": "object",
+  "properties": {
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OptionalString"
+        },
+        {
+          "description": "If SimSpace Weaver returns <code>nextToken</code>, then there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. To retrieve the next page, call the operation again using the returned token. Keep all other arguments unchanged. If no results remain, then <code>nextToken</code> is set to <code>null</code>. Each pagination token expires after 24 hours. If you provide a token that isn't valid, then you receive an <i>HTTP 400 ValidationException</i> error."
+        }
+      ]
+    },
+    "Simulations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationList"
+        },
+        {
+          "description": "The list of simulations."
+        }
+      ]
+    }
+  }
+}

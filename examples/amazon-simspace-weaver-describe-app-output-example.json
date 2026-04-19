@@ -1,0 +1,10 @@
+{
+  "Description": "example-value",
+  "Domain": "example-value",
+  "EndpointInfo": "example-value",
+  "LaunchOverrides": "example-value",
+  "Name": "MyResource",
+  "Simulation": "example-value",
+  "Status": "Active",
+  "TargetStatus": "Active"
+}

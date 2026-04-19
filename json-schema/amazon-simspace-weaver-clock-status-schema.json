@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-schema/amazon-simspace-weaver-clock-status-schema.json",
+  "title": "ClockStatus",
+  "description": "ClockStatus schema from Amazon SimSpace Weaver API",
+  "type": "string",
+  "enum": [
+    "UNKNOWN",
+    "STARTING",
+    "STARTED",
+    "STOPPING",
+    "STOPPED"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-schema/amazon-simspace-weaver-simulation-target-status-schema.json",
+  "title": "SimulationTargetStatus",
+  "description": "SimulationTargetStatus schema from Amazon SimSpace Weaver API",
+  "type": "string",
+  "enum": [
+    "UNKNOWN",
+    "STARTED",
+    "STOPPED",
+    "DELETED"
+  ]
+}

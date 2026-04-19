@@ -1,0 +1,7 @@
+{
+  "Domain": "example-value",
+  "Name": "MyResource",
+  "Simulation": "example-value",
+  "Status": "Active",
+  "TargetStatus": "Active"
+}

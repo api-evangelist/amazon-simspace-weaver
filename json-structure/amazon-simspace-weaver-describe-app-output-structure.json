@@ -1,0 +1,82 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/json-structure/amazon-simspace-weaver-describe-app-output-structure.json",
+  "name": "DescribeAppOutput",
+  "description": "DescribeAppOutput schema from Amazon SimSpace Weaver API",
+  "properties": {
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Description"
+        },
+        {
+          "description": "The description of the app."
+        }
+      ]
+    },
+    "Domain": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverResourceName"
+        },
+        {
+          "description": "The name of the domain of the app."
+        }
+      ]
+    },
+    "EndpointInfo": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationAppEndpointInfo"
+        },
+        {
+          "description": "Information about the network endpoint for the custom app. You can use the endpoint to connect to the custom app."
+        }
+      ]
+    },
+    "LaunchOverrides": {
+      "$ref": "#/components/schemas/LaunchOverrides"
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverLongResourceName"
+        },
+        {
+          "description": "The name of the app."
+        }
+      ]
+    },
+    "Simulation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimSpaceWeaverResourceName"
+        },
+        {
+          "description": "The name of the simulation of the app."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationAppStatus"
+        },
+        {
+          "description": "The current lifecycle state of the custom app."
+        }
+      ]
+    },
+    "TargetStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationAppTargetStatus"
+        },
+        {
+          "description": "The desired lifecycle state of the custom app."
+        }
+      ]
+    }
+  }
+}
