@@ -1,10 +1,8 @@
 aid: amazon-simspace-weaver
 name: Amazon SimSpace Weaver
-description: >-
-  AWS SimSpace Weaver is a managed service that helps you build and run
-  large-scale spatial simulations in the AWS Cloud. It provides tools to
-  run custom spatial simulation logic at scale and use simulation workloads
-  for defense, urban planning, and other real-world system simulations.
+description: AWS SimSpace Weaver is a managed service that helps you build and run large-scale spatial simulations in the
+  AWS Cloud. It provides tools to run custom spatial simulation logic at scale and use simulation workloads for defense, urban
+  planning, and other real-world system simulations.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -13,18 +11,15 @@ tags:
 - Digital Twin
 - Simulation
 - Spatial Simulation
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-04-19'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
 - aid: amazon-simspace-weaver:aws-simspace-weaver-api
   name: AWS SimSpace Weaver API
-  description: >-
-    The AWS SimSpace Weaver API provides programmatic access to create and
-    manage simulations, simulation apps, snapshots, and clocks for running
-    large-scale spatial simulations in the cloud.
+  description: The AWS SimSpace Weaver API provides programmatic access to create and manage simulations, simulation apps,
+    snapshots, and clocks for running large-scale spatial simulations in the cloud.
   humanURL: https://aws.amazon.com/simspace-weaver/
   baseURL: https://simspaceweaver.amazonaws.com
   tags:
@@ -42,6 +37,8 @@ apis:
     url: https://aws.amazon.com/simspaceweaver/pricing/
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/simspaceweaver/
@@ -71,8 +68,6 @@ common:
   url: rules/amazon-simspace-weaver-spectral-rules.yml
 - type: Vocabulary
   url: vocabulary/amazon-simspace-weaver-vocabulary.yaml
-- type: NaftikoCapability
-  url: capabilities/shared/amazon-simspace-weaver.yaml
 - type: Features
   data:
   - name: Large-scale Simulations
@@ -102,15 +97,15 @@ common:
 - type: Integrations
   url: https://aws.amazon.com/marketplace
 integrations:
-  - name: Sign in
-  - name: Agent Mode
-  - name: 'Why AWS Marketplace?'
-  - name: Get started in AWS Marketplace
-  - name: Industry
-  - name: Resources
-  - name: Become a Channel Partner
-  - name: Sell in AWS Marketplace
-  - name: Manage Your Account
+- name: Sign in
+- name: Agent Mode
+- name: Why AWS Marketplace?
+- name: Get started in AWS Marketplace
+- name: Industry
+- name: Resources
+- name: Become a Channel Partner
+- name: Sell in AWS Marketplace
+- name: Manage Your Account
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
