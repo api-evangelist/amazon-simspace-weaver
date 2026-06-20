@@ -4,7 +4,7 @@ description: AWS SimSpace Weaver is a managed service that helps you build and r
   AWS Cloud. It provides tools to run custom spatial simulation logic at scale and use simulation workloads for defense, urban
   planning, and other real-world system simulations.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - AWS
 - Defense
