@@ -40,6 +40,14 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-simspace-weaver.yaml
 common:
+- type: TrustCenter
+  url: security/amazon-simspace-weaver-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-simspace-weaver-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-simspace-weaver-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-simspace-weaver-authentication.yml
 - type: Portal
   url: https://aws.amazon.com/simspaceweaver/
 - type: Documentation
