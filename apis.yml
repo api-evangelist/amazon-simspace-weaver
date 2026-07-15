@@ -40,6 +40,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-simspace-weaver.yaml
 common:
+- type: AgenticAccess
+  url: agentic-access/amazon-simspace-weaver-agentic-access.yml
 - type: TrustCenter
   url: security/amazon-simspace-weaver-trust-center.yml
 - type: VulnerabilityDisclosure
