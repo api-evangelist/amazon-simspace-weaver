@@ -1,0 +1,398 @@
+openapi: 3.0.0
+info:
+  version: '2022-10-28'
+  x-release: v4
+  title: AWS SimSpace Weaver Createsnapshot Describeapp#app&domain&simulation API
+  description: <p>SimSpace Weaver (SimSpace Weaver) is a managed service that you can use to build and operate large-scale spatial simulations in the Amazon Web Services Cloud. For example, you can create a digital twin of a city, crowd simulations with millions of people and objects, and massively multiplayer games with hundreds of thousands of connected players. For more information about SimSpace Weaver, see the <i> <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/">SimSpace Weaver User Guide</a> </i>.</p> <p>This API reference describes the API operations and data types that you can use to communicate directly with SimSpace Weaver.</p> <p>SimSpace Weaver also provides the SimSpace Weaver app SDK, which you use for app development. The SimSpace Weaver app SDK API reference is included in the SimSpace Weaver app SDK documentation. This documentation is part of the SimSpace Weaver app SDK distributable package.</p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: simspaceweaver
+  x-aws-signingName: simspaceweaver
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/simspaceweaver-2022-10-28.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://simspaceweaver.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SimSpace Weaver multi-region endpoint
+- url: https://simspaceweaver.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SimSpace Weaver multi-region endpoint
+- url: http://simspaceweaver.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SimSpace Weaver endpoint for China (Beijing) and China (Ningxia)
+- url: https://simspaceweaver.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SimSpace Weaver endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: Describeapp#app&domain&simulation
+paths:
+  /describeapp#app&domain&simulation:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    get:
+      operationId: DescribeApp
+      description: Returns the state of the given custom app.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeAppOutput'
+              examples:
+                DescribeApp200Example:
+                  summary: Default DescribeApp 200
+                  x-microcks-default: true
+                  value:
+                    Description: example-value
+                    Domain: example-value
+                    EndpointInfo: example-value
+                    LaunchOverrides:
+                      LaunchCommands: example-value
+                    Name: MyResource
+                    Simulation: example-value
+                    Status: Active
+                    TargetStatus: Active
+        '480':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+              examples:
+                DescribeApp480Example:
+                  summary: Default DescribeApp 480
+                  x-microcks-default: true
+                  value: example-value
+        '481':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                DescribeApp481Example:
+                  summary: Default DescribeApp 481
+                  x-microcks-default: true
+                  value: example-value
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+              examples:
+                DescribeApp482Example:
+                  summary: Default DescribeApp 482
+                  x-microcks-default: true
+                  value: example-value
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+              examples:
+                DescribeApp483Example:
+                  summary: Default DescribeApp 483
+                  x-microcks-default: true
+                  value: example-value
+      parameters:
+      - name: app
+        in: query
+        required: true
+        description: The name of the app.
+        schema:
+          type: string
+          pattern: ^[a-zA-Z0-9_.-]+$
+          minLength: 1
+          maxLength: 256
+      - name: domain
+        in: query
+        required: true
+        description: The name of the domain of the app.
+        schema:
+          type: string
+          pattern: ^[a-zA-Z0-9_.-]+$
+          minLength: 1
+          maxLength: 64
+      - name: simulation
+        in: query
+        required: true
+        description: The name of the simulation of the app.
+        schema:
+          type: string
+          pattern: ^[a-zA-Z0-9_.-]+$
+          minLength: 1
+          maxLength: 64
+      summary: Amazon Describe App
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Describeapp#app&domain&simulation
+components:
+  schemas:
+    SimulationAppEndpointInfo:
+      type: object
+      properties:
+        Address:
+          allOf:
+          - $ref: '#/components/schemas/NonEmptyString'
+          - description: The IP address of the app. SimSpace Weaver dynamically assigns this IP address when the app starts.
+        IngressPortMappings:
+          allOf:
+          - $ref: '#/components/schemas/AppPortMappings'
+          - description: The inbound TCP/UDP port numbers of the app. The combination of an IP address and a port number form a network endpoint.
+      description: 'Information about the network endpoint that you can use to connect to your custom or service app. For more information about SimSpace Weaver apps, see <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is_key-concepts.html#what-is_key-concepts_apps">Key concepts: Apps</a> in the <i>SimSpace Weaver User Guide</i>..'
+    AppPortMappings:
+      type: array
+      items:
+        $ref: '#/components/schemas/SimulationAppPortMapping'
+    ValidationException: {}
+    ResourceNotFoundException: {}
+    DescribeAppOutput:
+      type: object
+      properties:
+        Description:
+          allOf:
+          - $ref: '#/components/schemas/Description'
+          - description: The description of the app.
+        Domain:
+          allOf:
+          - $ref: '#/components/schemas/SimSpaceWeaverResourceName'
+          - description: The name of the domain of the app.
+        EndpointInfo:
+          allOf:
+          - $ref: '#/components/schemas/SimulationAppEndpointInfo'
+          - description: Information about the network endpoint for the custom app. You can use the endpoint to connect to the custom app.
+        LaunchOverrides:
+          $ref: '#/components/schemas/LaunchOverrides'
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/SimSpaceWeaverLongResourceName'
+          - description: The name of the app.
+        Simulation:
+          allOf:
+          - $ref: '#/components/schemas/SimSpaceWeaverResourceName'
+          - description: The name of the simulation of the app.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/SimulationAppStatus'
+          - description: The current lifecycle state of the custom app.
+        TargetStatus:
+          allOf:
+          - $ref: '#/components/schemas/SimulationAppTargetStatus'
+          - description: The desired lifecycle state of the custom app.
+    LaunchOverrides:
+      type: object
+      properties:
+        LaunchCommands:
+          allOf:
+          - $ref: '#/components/schemas/LaunchCommandList'
+          - description: App launch commands and command line parameters that override the launch command configured in the simulation schema.
+      description: Options that apply when the app starts. These options override default behavior.
+    SimSpaceWeaverResourceName:
+      type: string
+      pattern: ^[a-zA-Z0-9_.-]+$
+      minLength: 1
+      maxLength: 64
+    SimulationAppTargetStatus:
+      type: string
+      enum:
+      - UNKNOWN
+      - STARTED
+      - STOPPED
+    LaunchCommandList:
+      type: array
+      items:
+        $ref: '#/components/schemas/NonEmptyString'
+    SimSpaceWeaverLongResourceName:
+      type: string
+      pattern: ^[a-zA-Z0-9_.-]+$
+      minLength: 1
+      maxLength: 256
+    SimulationAppStatus:
+      type: string
+      enum:
+      - STARTING
+      - STARTED
+      - STOPPING
+      - STOPPED
+      - ERROR
+      - UNKNOWN
+    PortNumber:
+      type: integer
+      minimum: 0
+      maximum: 65535
+    AccessDeniedException: {}
+    InternalServerException: {}
+    SimulationAppPortMapping:
+      type: object
+      properties:
+        Actual:
+          allOf:
+          - $ref: '#/components/schemas/PortNumber'
+          - description: The TCP/UDP port number of the running app. SimSpace Weaver dynamically assigns this port number when the app starts. SimSpace Weaver maps the <code>Declared</code> port to the <code>Actual</code> port. Clients connect to the app using the app's IP address and the <code>Actual</code> port number.
+        Declared:
+          allOf:
+          - $ref: '#/components/schemas/PortNumber'
+          - description: The TCP/UDP port number of the app, declared in the simulation schema. SimSpace Weaver maps the <code>Declared</code> port to the <code>Actual</code> port. The source code for the app should bind to the <code>Declared</code> port.
+      description: A collection of TCP/UDP ports for a custom or service app.
+    Description:
+      type: string
+      minLength: 0
+      maxLength: 500
+    NonEmptyString:
+      type: string
+      minLength: 1
+      maxLength: 1600
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/simspaceweaver/
+x-hasEquivalentPaths: true

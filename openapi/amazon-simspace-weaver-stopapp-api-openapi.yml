@@ -1,0 +1,304 @@
+openapi: 3.0.0
+info:
+  version: '2022-10-28'
+  x-release: v4
+  title: AWS SimSpace Weaver Createsnapshot Stopapp API
+  description: <p>SimSpace Weaver (SimSpace Weaver) is a managed service that you can use to build and operate large-scale spatial simulations in the Amazon Web Services Cloud. For example, you can create a digital twin of a city, crowd simulations with millions of people and objects, and massively multiplayer games with hundreds of thousands of connected players. For more information about SimSpace Weaver, see the <i> <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/">SimSpace Weaver User Guide</a> </i>.</p> <p>This API reference describes the API operations and data types that you can use to communicate directly with SimSpace Weaver.</p> <p>SimSpace Weaver also provides the SimSpace Weaver app SDK, which you use for app development. The SimSpace Weaver app SDK API reference is included in the SimSpace Weaver app SDK documentation. This documentation is part of the SimSpace Weaver app SDK distributable package.</p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: simspaceweaver
+  x-aws-signingName: simspaceweaver
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/simspaceweaver-2022-10-28.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://simspaceweaver.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SimSpace Weaver multi-region endpoint
+- url: https://simspaceweaver.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SimSpace Weaver multi-region endpoint
+- url: http://simspaceweaver.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SimSpace Weaver endpoint for China (Beijing) and China (Ningxia)
+- url: https://simspaceweaver.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SimSpace Weaver endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: Stopapp
+paths:
+  /stopapp:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: StopApp
+      description: Stops the given custom app and shuts down all of its allocated compute resources.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StopAppOutput'
+              examples:
+                StopApp200Example:
+                  summary: Default StopApp 200
+                  x-microcks-default: true
+                  value: {}
+        '480':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+              examples:
+                StopApp480Example:
+                  summary: Default StopApp 480
+                  x-microcks-default: true
+                  value: example-value
+        '481':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                StopApp481Example:
+                  summary: Default StopApp 481
+                  x-microcks-default: true
+                  value: example-value
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+              examples:
+                StopApp482Example:
+                  summary: Default StopApp 482
+                  x-microcks-default: true
+                  value: example-value
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+              examples:
+                StopApp483Example:
+                  summary: Default StopApp 483
+                  x-microcks-default: true
+                  value: example-value
+        '484':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                StopApp484Example:
+                  summary: Default StopApp 484
+                  x-microcks-default: true
+                  value: example-value
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - App
+              - Domain
+              - Simulation
+              properties:
+                App:
+                  description: The name of the app.
+                  type: string
+                  pattern: ^[a-zA-Z0-9_.-]+$
+                  minLength: 1
+                  maxLength: 64
+                Domain:
+                  description: The name of the domain of the app.
+                  type: string
+                  pattern: ^[a-zA-Z0-9_.-]+$
+                  minLength: 1
+                  maxLength: 64
+                Simulation:
+                  description: The name of the simulation of the app.
+                  type: string
+                  pattern: ^[a-zA-Z0-9_.-]+$
+                  minLength: 1
+                  maxLength: 64
+            examples:
+              StopAppRequestExample:
+                summary: Default StopApp request
+                x-microcks-default: true
+                value:
+                  App: example-value
+                  Domain: example-value
+                  Simulation: example-value
+      summary: Amazon Stop App
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Stopapp
+components:
+  schemas:
+    ConflictException: {}
+    AccessDeniedException: {}
+    StopAppOutput:
+      type: object
+      properties: {}
+    ResourceNotFoundException: {}
+    ValidationException: {}
+    InternalServerException: {}
+  parameters:
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/simspaceweaver/
+x-hasEquivalentPaths: true

@@ -1,0 +1,312 @@
+openapi: 3.0.0
+info:
+  version: '2022-10-28'
+  x-release: v4
+  title: AWS SimSpace Weaver Createsnapshot API
+  description: <p>SimSpace Weaver (SimSpace Weaver) is a managed service that you can use to build and operate large-scale spatial simulations in the Amazon Web Services Cloud. For example, you can create a digital twin of a city, crowd simulations with millions of people and objects, and massively multiplayer games with hundreds of thousands of connected players. For more information about SimSpace Weaver, see the <i> <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/">SimSpace Weaver User Guide</a> </i>.</p> <p>This API reference describes the API operations and data types that you can use to communicate directly with SimSpace Weaver.</p> <p>SimSpace Weaver also provides the SimSpace Weaver app SDK, which you use for app development. The SimSpace Weaver app SDK API reference is included in the SimSpace Weaver app SDK documentation. This documentation is part of the SimSpace Weaver app SDK distributable package.</p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: simspaceweaver
+  x-aws-signingName: simspaceweaver
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/simspaceweaver-2022-10-28.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://simspaceweaver.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SimSpace Weaver multi-region endpoint
+- url: https://simspaceweaver.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SimSpace Weaver multi-region endpoint
+- url: http://simspaceweaver.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SimSpace Weaver endpoint for China (Beijing) and China (Ningxia)
+- url: https://simspaceweaver.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SimSpace Weaver endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: Createsnapshot
+paths:
+  /createsnapshot:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: CreateSnapshot
+      description: '<p>Creates a snapshot of the specified simulation. A snapshot is a file that contains simulation state data at a specific time. The state data saved in a snapshot includes entity data from the State Fabric, the simulation configuration specified in the schema, and the clock tick number. You can use the snapshot to initialize a new simulation. For more information about snapshots, see <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/working-with_snapshots.html">Snapshots</a> in the <i>SimSpace Weaver User Guide</i>. </p> <p>You specify a <code>Destination</code> when you create a snapshot. The <code>Destination</code> is the name of an Amazon S3 bucket and an optional <code>ObjectKeyPrefix</code>. The <code>ObjectKeyPrefix</code> is usually the name of a folder in the bucket. SimSpace Weaver creates a <code>snapshot</code> folder inside the <code>Destination</code> and places the snapshot file there.</p> <p>The snapshot file is an Amazon S3 object. It has an object key with the form: <code> <i>object-key-prefix</i>/snapshot/<i>simulation-name</i>-<i>YYMMdd</i>-<i>HHmm</i>-<i>ss</i>.zip</code>, where: </p> <ul> <li> <p> <code> <i>YY</i> </code> is the 2-digit year</p> </li> <li> <p> <code> <i>MM</i> </code> is the 2-digit month</p> </li> <li> <p> <code> <i>dd</i> </code> is the 2-digit day of the month</p> </li> <li> <p> <code> <i>HH</i> </code> is the 2-digit hour (24-hour clock)</p> </li> <li> <p> <code> <i>mm</i> </code> is the 2-digit minutes</p> </li> <li> <p> <code> <i>ss</i> </code> is the 2-digit seconds</p> </li> </ul>'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateSnapshotOutput'
+              examples:
+                CreateSnapshot200Example:
+                  summary: Default CreateSnapshot 200
+                  x-microcks-default: true
+                  value: {}
+        '480':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+              examples:
+                CreateSnapshot480Example:
+                  summary: Default CreateSnapshot 480
+                  x-microcks-default: true
+                  value: example-value
+        '481':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                CreateSnapshot481Example:
+                  summary: Default CreateSnapshot 481
+                  x-microcks-default: true
+                  value: example-value
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+              examples:
+                CreateSnapshot482Example:
+                  summary: Default CreateSnapshot 482
+                  x-microcks-default: true
+                  value: example-value
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+              examples:
+                CreateSnapshot483Example:
+                  summary: Default CreateSnapshot 483
+                  x-microcks-default: true
+                  value: example-value
+        '484':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                CreateSnapshot484Example:
+                  summary: Default CreateSnapshot 484
+                  x-microcks-default: true
+                  value: example-value
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - Destination
+              - Simulation
+              properties:
+                Destination:
+                  description: An Amazon S3 bucket and optional folder (object key prefix) where SimSpace Weaver creates a file.
+                  type: object
+                  properties:
+                    BucketName:
+                      allOf:
+                      - $ref: '#/components/schemas/BucketName'
+                      - description: The name of an Amazon S3 bucket. For more information about buckets, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html">Creating, configuring, and working with Amazon S3 buckets</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+                    ObjectKeyPrefix:
+                      allOf:
+                      - $ref: '#/components/schemas/ObjectKeyPrefix'
+                      - description: A string prefix for an Amazon S3 object key. It's usually a folder name. For more information about folders in Amazon S3, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-folders.html">Organizing objects in the Amazon S3 console using folders</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+                Simulation:
+                  description: The name of the simulation.
+                  type: string
+                  pattern: ^[a-zA-Z0-9_.-]+$
+                  minLength: 1
+                  maxLength: 64
+            examples:
+              CreateSnapshotRequestExample:
+                summary: Default CreateSnapshot request
+                x-microcks-default: true
+                value:
+                  Destination:
+                    BucketName: MyResource
+                    ObjectKeyPrefix: example-value
+                  Simulation: example-value
+      summary: Amazon Create Snapshot
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Createsnapshot
+components:
+  schemas:
+    ConflictException: {}
+    CreateSnapshotOutput:
+      type: object
+      properties: {}
+    BucketName:
+      type: string
+      minLength: 3
+      maxLength: 63
+    ObjectKeyPrefix:
+      type: string
+      minLength: 0
+      maxLength: 1024
+    AccessDeniedException: {}
+    ResourceNotFoundException: {}
+    ValidationException: {}
+    InternalServerException: {}
+  parameters:
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/simspaceweaver/
+x-hasEquivalentPaths: true

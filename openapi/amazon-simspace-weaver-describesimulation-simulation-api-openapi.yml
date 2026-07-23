@@ -1,0 +1,510 @@
+openapi: 3.0.0
+info:
+  version: '2022-10-28'
+  x-release: v4
+  title: AWS SimSpace Weaver Createsnapshot Describesimulation#simulation API
+  description: <p>SimSpace Weaver (SimSpace Weaver) is a managed service that you can use to build and operate large-scale spatial simulations in the Amazon Web Services Cloud. For example, you can create a digital twin of a city, crowd simulations with millions of people and objects, and massively multiplayer games with hundreds of thousands of connected players. For more information about SimSpace Weaver, see the <i> <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/">SimSpace Weaver User Guide</a> </i>.</p> <p>This API reference describes the API operations and data types that you can use to communicate directly with SimSpace Weaver.</p> <p>SimSpace Weaver also provides the SimSpace Weaver app SDK, which you use for app development. The SimSpace Weaver app SDK API reference is included in the SimSpace Weaver app SDK documentation. This documentation is part of the SimSpace Weaver app SDK distributable package.</p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: simspaceweaver
+  x-aws-signingName: simspaceweaver
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/simspaceweaver-2022-10-28.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://simspaceweaver.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SimSpace Weaver multi-region endpoint
+- url: https://simspaceweaver.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SimSpace Weaver multi-region endpoint
+- url: http://simspaceweaver.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SimSpace Weaver endpoint for China (Beijing) and China (Ningxia)
+- url: https://simspaceweaver.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SimSpace Weaver endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: Describesimulation#simulation
+paths:
+  /describesimulation#simulation:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    get:
+      operationId: DescribeSimulation
+      description: Returns the current state of the given simulation.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeSimulationOutput'
+              examples:
+                DescribeSimulation200Example:
+                  summary: Default DescribeSimulation 200
+                  x-microcks-default: true
+                  value:
+                    Arn: arn:aws:service:us-east-1:123456789012:resource/example
+                    CreationTime: example-value
+                    Description: example-value
+                    ExecutionId: example-value
+                    LiveSimulationState: example-value
+                    LoggingConfiguration: example-value
+                    MaximumDuration: example-value
+                    Name: MyResource
+                    RoleArn: arn:aws:service:us-east-1:123456789012:resource/example
+                    SchemaError: example-value
+                    SchemaS3Location: example-value
+                    SnapshotS3Location:
+                      BucketName: MyResource
+                      ObjectKey: example-value
+                    StartError: example-value
+                    Status: Active
+                    TargetStatus: Active
+        '480':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+              examples:
+                DescribeSimulation480Example:
+                  summary: Default DescribeSimulation 480
+                  x-microcks-default: true
+                  value: example-value
+        '481':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                DescribeSimulation481Example:
+                  summary: Default DescribeSimulation 481
+                  x-microcks-default: true
+                  value: example-value
+        '482':
+          description: AccessDeniedException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccessDeniedException'
+              examples:
+                DescribeSimulation482Example:
+                  summary: Default DescribeSimulation 482
+                  x-microcks-default: true
+                  value: example-value
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+              examples:
+                DescribeSimulation483Example:
+                  summary: Default DescribeSimulation 483
+                  x-microcks-default: true
+                  value: example-value
+      parameters:
+      - name: simulation
+        in: query
+        required: true
+        description: The name of the simulation.
+        schema:
+          type: string
+          pattern: ^[a-zA-Z0-9_.-]+$
+          minLength: 1
+          maxLength: 64
+      summary: Amazon Describe Simulation
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Describesimulation#simulation
+components:
+  schemas:
+    BucketName:
+      type: string
+      minLength: 3
+      maxLength: 63
+    RoleArn:
+      type: string
+      pattern: ^arn:(?:aws|aws-cn|aws-us-gov):iam::(\d{12})?:role\/(.+)$
+      minLength: 0
+      maxLength: 1600
+    OptionalString:
+      type: string
+    SimulationStatus:
+      type: string
+      enum:
+      - UNKNOWN
+      - STARTING
+      - STARTED
+      - STOPPING
+      - STOPPED
+      - FAILED
+      - DELETING
+      - DELETED
+      - SNAPSHOT_IN_PROGRESS
+    LoggingConfiguration:
+      type: object
+      properties:
+        Destinations:
+          allOf:
+          - $ref: '#/components/schemas/LogDestinations'
+          - description: A list of the locations where SimSpace Weaver sends simulation log data.
+      description: The logging configuration for a simulation.
+    ClockStatus:
+      type: string
+      enum:
+      - UNKNOWN
+      - STARTING
+      - STARTED
+      - STOPPING
+      - STOPPED
+    ValidationException: {}
+    UUID:
+      type: string
+      pattern: ^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$
+      minLength: 36
+    ResourceNotFoundException: {}
+    LogDestinations:
+      type: array
+      items:
+        $ref: '#/components/schemas/LogDestination'
+    SimSpaceWeaverResourceName:
+      type: string
+      pattern: ^[a-zA-Z0-9_.-]+$
+      minLength: 1
+      maxLength: 64
+    SimulationClock:
+      type: object
+      properties:
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/ClockStatus'
+          - description: The current status of the simulation clock.
+        TargetStatus:
+          allOf:
+          - $ref: '#/components/schemas/ClockTargetStatus'
+          - description: The desired status of the simulation clock.
+      description: Status information about the simulation clock.
+    LifecycleManagementStrategy:
+      type: string
+      enum:
+      - Unknown
+      - PerWorker
+      - BySpatialSubdivision
+      - ByRequest
+    Domain:
+      type: object
+      properties:
+        Lifecycle:
+          allOf:
+          - $ref: '#/components/schemas/LifecycleManagementStrategy'
+          - description: '<p>The type of lifecycle management for apps in the domain. Indicates whether apps in this domain are <i>managed</i> (SimSpace Weaver starts and stops the apps) or <i>unmanaged</i> (you must start and stop the apps).</p> <p class="title"> <b>Lifecycle types</b> </p> <ul> <li> <p> <code>PerWorker</code> – Managed: SimSpace Weaver starts one app on each worker.</p> </li> <li> <p> <code>BySpatialSubdivision</code> – Managed: SimSpace Weaver starts one app for each spatial partition.</p> </li> <li> <p> <code>ByRequest</code> – Unmanaged: You use the <code>StartApp</code> API to start the apps and use the <code>StopApp</code> API to stop the apps.</p> </li> </ul>'
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/SimSpaceWeaverResourceName'
+          - description: The name of the domain.
+      description: '<p>A collection of app instances that run the same executable app code and have the same launch options and commands.</p> <p>For more information about domains, see <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is_key-concepts.html#what-is_key-concepts_domains">Key concepts: Domains</a> in the <i>SimSpace Weaver User Guide</i>.</p>'
+    SimulationTargetStatus:
+      type: string
+      enum:
+      - UNKNOWN
+      - STARTED
+      - STOPPED
+      - DELETED
+    ObjectKey:
+      type: string
+      minLength: 1
+      maxLength: 1024
+    LogGroupArn:
+      type: string
+      pattern: ^arn:(?:aws|aws-cn|aws-us-gov):log-group:([a-z]{2}-[a-z]+-\d{1}):(\d{12})?:role\/(.+)$
+      minLength: 0
+      maxLength: 1600
+    LiveSimulationState:
+      type: object
+      properties:
+        Clocks:
+          allOf:
+          - $ref: '#/components/schemas/SimulationClockList'
+          - description: <p>A list of simulation clocks.</p> <note> <p>At this time, a simulation has only one clock.</p> </note>
+        Domains:
+          allOf:
+          - $ref: '#/components/schemas/DomainList'
+          - description: 'A list of domains for the simulation. For more information about domains, see <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is_key-concepts.html#what-is_key-concepts_domains">Key concepts: Domains</a> in the <i>SimSpace Weaver User Guide</i>.'
+      description: A collection of additional state information, such as domain and clock configuration.
+    DescribeSimulationOutput:
+      type: object
+      properties:
+        Arn:
+          allOf:
+          - $ref: '#/components/schemas/SimSpaceWeaverArn'
+          - description: The Amazon Resource Name (ARN) of the simulation. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.
+        CreationTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time when the simulation was created, expressed as the number of seconds and milliseconds in UTC since the Unix epoch (0:0:0.000, January 1, 1970).
+        Description:
+          allOf:
+          - $ref: '#/components/schemas/Description'
+          - description: The description of the simulation.
+        ExecutionId:
+          allOf:
+          - $ref: '#/components/schemas/UUID'
+          - description: A universally unique identifier (UUID) for this simulation.
+        LiveSimulationState:
+          allOf:
+          - $ref: '#/components/schemas/LiveSimulationState'
+          - description: A collection of additional state information, such as domain and clock configuration.
+        LoggingConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/LoggingConfiguration'
+          - description: Settings that control how SimSpace Weaver handles your simulation log data.
+        MaximumDuration:
+          allOf:
+          - $ref: '#/components/schemas/TimeToLiveString'
+          - description: The maximum running time of the simulation, specified as a number of minutes (m or M), hours (h or H), or days (d or D). The simulation stops when it reaches this limit. The maximum value is <code>14D</code>, or its equivalent in the other units. The default value is <code>14D</code>. A value equivalent to <code>0</code> makes the simulation immediately transition to <code>Stopping</code> as soon as it reaches <code>Started</code>.
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/SimSpaceWeaverResourceName'
+          - description: The name of the simulation.
+        RoleArn:
+          allOf:
+          - $ref: '#/components/schemas/RoleArn'
+          - description: The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that the simulation assumes to perform actions. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. For more information about IAM roles, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM roles</a> in the <i>Identity and Access Management User Guide</i>.
+        SchemaError:
+          allOf:
+          - $ref: '#/components/schemas/OptionalString'
+          - deprecated: true
+            description: An error message that SimSpace Weaver returns only if there is a problem with the simulation schema.SchemaError is no longer used, check StartError instead.
+        SchemaS3Location:
+          allOf:
+          - $ref: '#/components/schemas/S3Location'
+          - description: The location of the simulation schema in Amazon Simple Storage Service (Amazon S3). For more information about Amazon S3, see the <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"> <i>Amazon Simple Storage Service User Guide</i> </a>.
+        SnapshotS3Location:
+          $ref: '#/components/schemas/S3Location'
+        StartError:
+          allOf:
+          - $ref: '#/components/schemas/OptionalString'
+          - description: An error message that SimSpace Weaver returns only if a problem occurs when the simulation is in the <code>STARTING</code> state.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/SimulationStatus'
+          - description: The current lifecycle state of the simulation.
+        TargetStatus:
+          allOf:
+          - $ref: '#/components/schemas/SimulationTargetStatus'
+          - description: The desired lifecycle state of the simulation.
+    S3Location:
+      type: object
+      properties:
+        BucketName:
+          allOf:
+          - $ref: '#/components/schemas/BucketName'
+          - description: The name of an Amazon S3 bucket. For more information about buckets, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html">Creating, configuring, and working with Amazon S3 buckets</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+        ObjectKey:
+          allOf:
+          - $ref: '#/components/schemas/ObjectKey'
+          - description: The key name of an object in Amazon S3. For more information about Amazon S3 objects and object keys, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/uploading-downloading-objects.html">Uploading, downloading, and working with objects in Amazon S3</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+      description: A location in Amazon Simple Storage Service (Amazon S3) where SimSpace Weaver stores simulation data, such as your app .zip files and schema file. For more information about Amazon S3, see the <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"> <i>Amazon Simple Storage Service User Guide</i> </a>.
+    TimeToLiveString:
+      type: string
+      pattern: ^\d{1,5}[mhdMHD]$
+      minLength: 2
+      maxLength: 6
+    CloudWatchLogsLogGroup:
+      type: object
+      properties:
+        LogGroupArn:
+          allOf:
+          - $ref: '#/components/schemas/LogGroupArn'
+          - description: The Amazon Resource Name (ARN) of the Amazon CloudWatch Logs log group for the simulation. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. For more information about log groups, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html">Working with log groups and log streams</a> in the <i>Amazon CloudWatch Logs User Guide</i>.
+      description: The Amazon CloudWatch Logs log group for the simulation. For more information about log groups, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html">Working with log groups and log streams</a> in the <i>Amazon CloudWatch Logs User Guide</i>.
+    SimSpaceWeaverArn:
+      type: string
+      pattern: ^arn:(?:aws|aws-cn|aws-us-gov):simspaceweaver:([a-z]{2}-[a-z]+-\d{1}):(\d{12})?:([a-z]+)\/(.+)$
+      minLength: 0
+      maxLength: 1600
+    Timestamp:
+      type: string
+      format: date-time
+    ClockTargetStatus:
+      type: string
+      enum:
+      - UNKNOWN
+      - STARTED
+      - STOPPED
+    AccessDeniedException: {}
+    LogDestination:
+      type: object
+      properties:
+        CloudWatchLogsLogGroup:
+          allOf:
+          - $ref: '#/components/schemas/CloudWatchLogsLogGroup'
+          - description: An Amazon CloudWatch Logs log group that stores simulation log data. For more information about log groups, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html">Working with log groups and log streams</a> in the <i>Amazon CloudWatch Logs User Guide</i>.
+      description: The location where SimSpace Weaver sends simulation log data.
+    DomainList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Domain'
+    SimulationClockList:
+      type: array
+      items:
+        $ref: '#/components/schemas/SimulationClock'
+    InternalServerException: {}
+    Description:
+      type: string
+      minLength: 0
+      maxLength: 500
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/simspaceweaver/
+x-hasEquivalentPaths: true
