@@ -4,7 +4,20 @@ description: AWS SimSpace Weaver is a managed service that helps you build and r
   AWS Cloud. It provides tools to run custom spatial simulation logic at scale and use simulation workloads for defense, urban
   planning, and other real-world system simulations.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-simspace-weaver.png
 tags:
 - AWS
 - Defense
@@ -16,21 +29,285 @@ created: '2026-03-16'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-- aid: amazon-simspace-weaver:aws-simspace-weaver-api
-  name: AWS SimSpace Weaver API
-  description: The AWS SimSpace Weaver API provides programmatic access to create and manage simulations, simulation apps,
-    snapshots, and clocks for running large-scale spatial simulations in the cloud.
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-createsnapshot-api
+  name: Amazon SimSpace Weaver Createsnapshot API
+  description: The Createsnapshot API from Amazon SimSpace Weaver — 1 operation(s) for createsnapshot.
   humanURL: https://aws.amazon.com/simspace-weaver/
   baseURL: https://simspaceweaver.amazonaws.com
   tags:
-  - Digital Twin
-  - Simulation
-  - Spatial Simulation
+  - Createsnapshot
   properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-createsnapshot-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-deleteapp-app-domain-simulation-api
+  name: Amazon SimSpace Weaver Deleteapp#app&domain&simulation API
+  description: >-
+    The Deleteapp#app&domain&simulation API from Amazon SimSpace Weaver — 1 operation(s) for deleteapp#app&domain&simulation.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Deleteapp#app&domain&simulation
+  properties:
   - type: OpenAPI
-    url: openapi/amazon-simspace-weaver.yaml
+    url: openapi/amazon-simspace-weaver-deleteapp-app-domain-simulation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-deletesimulation-simulation-api
+  name: Amazon SimSpace Weaver Deletesimulation#simulation API
+  description: >-
+    The Deletesimulation#simulation API from Amazon SimSpace Weaver — 1 operation(s) for deletesimulation#simulation.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Deletesimulation#simulation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-deletesimulation-simulation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-describeapp-app-domain-simulation-api
+  name: Amazon SimSpace Weaver Describeapp#app&domain&simulation API
+  description: >-
+    The Describeapp#app&domain&simulation API from Amazon SimSpace Weaver — 1 operation(s) for describeapp#app&domain&simulation.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Describeapp#app&domain&simulation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-describeapp-app-domain-simulation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-describesimulation-simulation-api
+  name: Amazon SimSpace Weaver Describesimulation#simulation API
+  description: >-
+    The Describesimulation#simulation API from Amazon SimSpace Weaver — 1 operation(s) for describesimulation#simulation.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Describesimulation#simulation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-describesimulation-simulation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-listapps-simulation-api
+  name: Amazon SimSpace Weaver Listapps#simulation API
+  description: >-
+    The Listapps#simulation API from Amazon SimSpace Weaver — 1 operation(s) for listapps#simulation.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Listapps#simulation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-listapps-simulation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-listsimulations-api
+  name: Amazon SimSpace Weaver Listsimulations API
+  description: >-
+    The Listsimulations API from Amazon SimSpace Weaver — 1 operation(s) for listsimulations.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Listsimulations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-listsimulations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-startapp-api
+  name: Amazon SimSpace Weaver Startapp API
+  description: The Startapp API from Amazon SimSpace Weaver — 1 operation(s) for startapp.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Startapp
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-startapp-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-startclock-api
+  name: Amazon SimSpace Weaver Startclock API
+  description: The Startclock API from Amazon SimSpace Weaver — 1 operation(s) for startclock.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Startclock
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-startclock-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-startsimulation-api
+  name: Amazon SimSpace Weaver Startsimulation API
+  description: >-
+    The Startsimulation API from Amazon SimSpace Weaver — 1 operation(s) for startsimulation.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Startsimulation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-startsimulation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-stopapp-api
+  name: Amazon SimSpace Weaver Stopapp API
+  description: The Stopapp API from Amazon SimSpace Weaver — 1 operation(s) for stopapp.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Stopapp
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-stopapp-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-stopclock-api
+  name: Amazon SimSpace Weaver Stopclock API
+  description: The Stopclock API from Amazon SimSpace Weaver — 1 operation(s) for stopclock.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Stopclock
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-stopclock-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-stopsimulation-api
+  name: Amazon SimSpace Weaver Stopsimulation API
+  description: The Stopsimulation API from Amazon SimSpace Weaver — 1 operation(s) for stopsimulation.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Stopsimulation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-stopsimulation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simspaceweaver/
+  - type: Pricing
+    url: https://aws.amazon.com/simspaceweaver/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simspaceweaver/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simspace-weaver.yaml
+- aid: amazon-simspace-weaver:amazon-simspace-weaver-tags-api
+  name: Amazon SimSpace Weaver Tags API
+  description: The Tags API from Amazon SimSpace Weaver — 2 operation(s) for tags.
+  humanURL: https://aws.amazon.com/simspace-weaver/
+  baseURL: https://simspaceweaver.amazonaws.com
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simspace-weaver-tags-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html
   - type: GettingStarted
     url: https://aws.amazon.com/simspaceweaver/
   - type: Pricing
@@ -40,6 +317,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-simspace-weaver.yaml
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-simspace-weaver/overview
 - type: AgenticAccess
   url: agentic-access/amazon-simspace-weaver-agentic-access.yml
 - type: TrustCenter
