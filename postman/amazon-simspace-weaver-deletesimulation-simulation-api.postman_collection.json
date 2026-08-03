@@ -1,0 +1,578 @@
+{
+  "info": {
+    "_postman_id": "95d84d41-10fd-4ee9-9d1d-2b9d4350a3da",
+    "name": "AWS SimSpace Weaver Createsnapshot Deletesimulation#simulation API",
+    "description": "<p>SimSpace Weaver (SimSpace Weaver) is a managed service that you can use to build and operate large-scale spatial simulations in the Amazon Web Services Cloud. For example, you can create a digital twin of a city, crowd simulations with millions of people and objects, and massively multiplayer games with hundreds of thousands of connected players. For more information about SimSpace Weaver, see the <i> <a href=\"https://docs.aws.amazon.com/simspaceweaver/latest/userguide/\">SimSpace Weaver User Guide</a> </i>.</p> <p>This API reference describes the API operations and data types that you can use to communicate directly with SimSpace Weaver.</p> <p>SimSpace Weaver also provides the SimSpace Weaver app SDK, which you use for app development. The SimSpace Weaver app SDK API reference is included in the SimSpace Weaver app SDK documentation. This documentation is part of the SimSpace Weaver app SDK distributable package.</p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:45:30.000Z",
+    "updatedAt": "2026-07-28T10:45:31.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-95d84d41-10fd-4ee9-9d1d-2b9d4350a3da"
+  },
+  "item": [
+    {
+      "name": "deletesimulation#simulation",
+      "item": [
+        {
+          "name": "Amazon Delete Simulation",
+          "id": "78bbda08-1488-4ab9-a0da-08d7d69b44bf",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/deletesimulation?simulation=ed_trpx#simulation",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "deletesimulation"
+              ],
+              "query": [
+                {
+                  "description": "(Required) The name of the simulation.",
+                  "key": "simulation",
+                  "value": "ed_trpx"
+                }
+              ],
+              "hash": "simulation"
+            },
+            "description": "<p>Deletes all SimSpace Weaver resources assigned to the given simulation.</p> <note> <p>Your simulation uses resources in other Amazon Web Services. This API operation doesn't delete resources in other Amazon Web Services.</p> </note>"
+          },
+          "response": [
+            {
+              "id": "6ac53e53-2ecb-4f6b-8413-5c43482cbd05",
+              "name": "Success",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/deletesimulation?simulation=ed_trpx#simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "deletesimulation"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the simulation.",
+                      "key": "simulation",
+                      "value": "ed_trpx"
+                    }
+                  ],
+                  "hash": "simulation"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:31.000Z",
+              "updatedAt": "2026-07-28T10:45:31.000Z",
+              "uid": "35240-6ac53e53-2ecb-4f6b-8413-5c43482cbd05"
+            },
+            {
+              "id": "87689410-193f-40f4-bd7e-69a25bc790cc",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/deletesimulation?simulation=ed_trpx#simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "deletesimulation"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the simulation.",
+                      "key": "simulation",
+                      "value": "ed_trpx"
+                    }
+                  ],
+                  "hash": "simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:31.000Z",
+              "updatedAt": "2026-07-28T10:45:31.000Z",
+              "uid": "35240-87689410-193f-40f4-bd7e-69a25bc790cc"
+            },
+            {
+              "id": "0ed4813a-f714-44c9-8c88-36939394213e",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/deletesimulation?simulation=ed_trpx#simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "deletesimulation"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the simulation.",
+                      "key": "simulation",
+                      "value": "ed_trpx"
+                    }
+                  ],
+                  "hash": "simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:31.000Z",
+              "updatedAt": "2026-07-28T10:45:31.000Z",
+              "uid": "35240-0ed4813a-f714-44c9-8c88-36939394213e"
+            },
+            {
+              "id": "750562d2-7a6c-40be-946c-016e02bdcf56",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/deletesimulation?simulation=ed_trpx#simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "deletesimulation"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the simulation.",
+                      "key": "simulation",
+                      "value": "ed_trpx"
+                    }
+                  ],
+                  "hash": "simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:31.000Z",
+              "updatedAt": "2026-07-28T10:45:31.000Z",
+              "uid": "35240-750562d2-7a6c-40be-946c-016e02bdcf56"
+            },
+            {
+              "id": "5f3b83b7-b626-4d39-924a-ae494c203f6c",
+              "name": "ValidationException",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/deletesimulation?simulation=ed_trpx#simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "deletesimulation"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the simulation.",
+                      "key": "simulation",
+                      "value": "ed_trpx"
+                    }
+                  ],
+                  "hash": "simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:31.000Z",
+              "updatedAt": "2026-07-28T10:45:31.000Z",
+              "uid": "35240-5f3b83b7-b626-4d39-924a-ae494c203f6c"
+            },
+            {
+              "id": "5974cb89-54d8-4e3a-8053-e5b6a2415dd5",
+              "name": "ConflictException",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/deletesimulation?simulation=ed_trpx#simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "deletesimulation"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the simulation.",
+                      "key": "simulation",
+                      "value": "ed_trpx"
+                    }
+                  ],
+                  "hash": "simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:31.000Z",
+              "updatedAt": "2026-07-28T10:45:31.000Z",
+              "uid": "35240-5974cb89-54d8-4e3a-8053-e5b6a2415dd5"
+            }
+          ],
+          "createdAt": "2026-07-28T10:45:31.000Z",
+          "updatedAt": "2026-07-28T10:45:31.000Z",
+          "uid": "35240-78bbda08-1488-4ab9-a0da-08d7d69b44bf"
+        }
+      ],
+      "id": "ae46ba8d-c00a-4f37-8c07-34a4f2ecb642",
+      "createdAt": "2026-07-28T10:45:31.000Z",
+      "updatedAt": "2026-07-28T10:45:31.000Z",
+      "uid": "35240-ae46ba8d-c00a-4f37-8c07-34a4f2ecb642"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://simspaceweaver.{{region}}.amazonaws.com"
+    }
+  ]
+}

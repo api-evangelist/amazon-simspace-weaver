@@ -1,0 +1,40 @@
+{
+  "provider": "amazon-simspace-weaver",
+  "sources": [
+    "amazon-simspace-weaver-createsnapshot-api-openapi.yml",
+    "amazon-simspace-weaver-deleteapp-app-domain-simulation-api-openapi.yml",
+    "amazon-simspace-weaver-deletesimulation-simulation-api-openapi.yml",
+    "amazon-simspace-weaver-describeapp-app-domain-simulation-api-openapi.yml",
+    "amazon-simspace-weaver-describesimulation-simulation-api-openapi.yml",
+    "amazon-simspace-weaver-listapps-simulation-api-openapi.yml",
+    "amazon-simspace-weaver-listsimulations-api-openapi.yml",
+    "amazon-simspace-weaver-startapp-api-openapi.yml",
+    "amazon-simspace-weaver-startclock-api-openapi.yml",
+    "amazon-simspace-weaver-startsimulation-api-openapi.yml",
+    "amazon-simspace-weaver-stopapp-api-openapi.yml",
+    "amazon-simspace-weaver-stopclock-api-openapi.yml",
+    "amazon-simspace-weaver-stopsimulation-api-openapi.yml",
+    "amazon-simspace-weaver-tags-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-simspace-weaver-createsnapshot-api-openapi.yml",
+    "amazon-simspace-weaver-deleteapp-app-domain-simulation-api-openapi.yml",
+    "amazon-simspace-weaver-deletesimulation-simulation-api-openapi.yml",
+    "amazon-simspace-weaver-describeapp-app-domain-simulation-api-openapi.yml",
+    "amazon-simspace-weaver-describesimulation-simulation-api-openapi.yml",
+    "amazon-simspace-weaver-listapps-simulation-api-openapi.yml",
+    "amazon-simspace-weaver-listsimulations-api-openapi.yml",
+    "amazon-simspace-weaver-startapp-api-openapi.yml",
+    "amazon-simspace-weaver-startclock-api-openapi.yml",
+    "amazon-simspace-weaver-startsimulation-api-openapi.yml",
+    "amazon-simspace-weaver-stopapp-api-openapi.yml",
+    "amazon-simspace-weaver-stopclock-api-openapi.yml",
+    "amazon-simspace-weaver-stopsimulation-api-openapi.yml",
+    "amazon-simspace-weaver-tags-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

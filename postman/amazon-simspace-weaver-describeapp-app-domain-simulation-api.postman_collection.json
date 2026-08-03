@@ -1,0 +1,562 @@
+{
+  "info": {
+    "_postman_id": "77b4cbc8-cdcf-4a95-934e-65bd946e60b1",
+    "name": "AWS SimSpace Weaver Createsnapshot Describeapp#app&domain&simulation API",
+    "description": "<p>SimSpace Weaver (SimSpace Weaver) is a managed service that you can use to build and operate large-scale spatial simulations in the Amazon Web Services Cloud. For example, you can create a digital twin of a city, crowd simulations with millions of people and objects, and massively multiplayer games with hundreds of thousands of connected players. For more information about SimSpace Weaver, see the <i> <a href=\"https://docs.aws.amazon.com/simspaceweaver/latest/userguide/\">SimSpace Weaver User Guide</a> </i>.</p> <p>This API reference describes the API operations and data types that you can use to communicate directly with SimSpace Weaver.</p> <p>SimSpace Weaver also provides the SimSpace Weaver app SDK, which you use for app development. The SimSpace Weaver app SDK API reference is included in the SimSpace Weaver app SDK documentation. This documentation is part of the SimSpace Weaver app SDK distributable package.</p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:45:35.000Z",
+    "updatedAt": "2026-07-28T10:45:35.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-77b4cbc8-cdcf-4a95-934e-65bd946e60b1"
+  },
+  "item": [
+    {
+      "name": "describeapp#app&domain&simulation",
+      "item": [
+        {
+          "name": "Amazon Describe App",
+          "id": "32befee3-cb80-4fb6-ba24-48f5ca180ec8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/describeapp?app=kfwJLJA&domain=_y3cjVVDH&simulation=_y3cjVVDH#app&domain&simulation",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "describeapp"
+              ],
+              "query": [
+                {
+                  "description": "(Required) The name of the app.",
+                  "key": "app",
+                  "value": "kfwJLJA"
+                },
+                {
+                  "description": "(Required) The name of the domain of the app.",
+                  "key": "domain",
+                  "value": "_y3cjVVDH"
+                },
+                {
+                  "description": "(Required) The name of the simulation of the app.",
+                  "key": "simulation",
+                  "value": "_y3cjVVDH"
+                }
+              ],
+              "hash": "app&domain&simulation"
+            },
+            "description": "Returns the state of the given custom app."
+          },
+          "response": [
+            {
+              "id": "da67c26e-406b-47bd-95fd-30686df53a2b",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/describeapp?app=kfwJLJA&domain=_y3cjVVDH&simulation=_y3cjVVDH#app&domain&simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeapp"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the app.",
+                      "key": "app",
+                      "value": "kfwJLJA"
+                    },
+                    {
+                      "description": "(Required) The name of the domain of the app.",
+                      "key": "domain",
+                      "value": "_y3cjVVDH"
+                    },
+                    {
+                      "description": "(Required) The name of the simulation of the app.",
+                      "key": "simulation",
+                      "value": "_y3cjVVDH"
+                    }
+                  ],
+                  "hash": "app&domain&simulation"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"Description\": \"<string>\",\n  \"Domain\": \"xN\",\n  \"EndpointInfo\": {\n    \"Address\": \"<string>\",\n    \"IngressPortMappings\": [\n      {\n        \"Actual\": \"<integer>\",\n        \"Declared\": \"<integer>\"\n      },\n      {\n        \"Actual\": \"<integer>\",\n        \"Declared\": \"<integer>\"\n      }\n    ]\n  },\n  \"LaunchOverrides\": {\n    \"LaunchCommands\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"Name\": \"-U_qR\",\n  \"Simulation\": \"cacperdU8t\",\n  \"Status\": \"STOPPING\",\n  \"TargetStatus\": \"UNKNOWN\"\n}",
+              "createdAt": "2026-07-28T10:45:35.000Z",
+              "updatedAt": "2026-07-28T10:45:35.000Z",
+              "uid": "35240-da67c26e-406b-47bd-95fd-30686df53a2b"
+            },
+            {
+              "id": "878009c0-3bf8-41b0-b8fc-f68f1e5888ee",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/describeapp?app=kfwJLJA&domain=_y3cjVVDH&simulation=_y3cjVVDH#app&domain&simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeapp"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the app.",
+                      "key": "app",
+                      "value": "kfwJLJA"
+                    },
+                    {
+                      "description": "(Required) The name of the domain of the app.",
+                      "key": "domain",
+                      "value": "_y3cjVVDH"
+                    },
+                    {
+                      "description": "(Required) The name of the simulation of the app.",
+                      "key": "simulation",
+                      "value": "_y3cjVVDH"
+                    }
+                  ],
+                  "hash": "app&domain&simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:35.000Z",
+              "updatedAt": "2026-07-28T10:45:35.000Z",
+              "uid": "35240-878009c0-3bf8-41b0-b8fc-f68f1e5888ee"
+            },
+            {
+              "id": "f5ed6fb3-5f21-452a-a635-c7c7fbb23da6",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/describeapp?app=kfwJLJA&domain=_y3cjVVDH&simulation=_y3cjVVDH#app&domain&simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeapp"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the app.",
+                      "key": "app",
+                      "value": "kfwJLJA"
+                    },
+                    {
+                      "description": "(Required) The name of the domain of the app.",
+                      "key": "domain",
+                      "value": "_y3cjVVDH"
+                    },
+                    {
+                      "description": "(Required) The name of the simulation of the app.",
+                      "key": "simulation",
+                      "value": "_y3cjVVDH"
+                    }
+                  ],
+                  "hash": "app&domain&simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:35.000Z",
+              "updatedAt": "2026-07-28T10:45:35.000Z",
+              "uid": "35240-f5ed6fb3-5f21-452a-a635-c7c7fbb23da6"
+            },
+            {
+              "id": "fb43f615-8ca1-4a88-b3d6-c652e3e5e132",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/describeapp?app=kfwJLJA&domain=_y3cjVVDH&simulation=_y3cjVVDH#app&domain&simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeapp"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the app.",
+                      "key": "app",
+                      "value": "kfwJLJA"
+                    },
+                    {
+                      "description": "(Required) The name of the domain of the app.",
+                      "key": "domain",
+                      "value": "_y3cjVVDH"
+                    },
+                    {
+                      "description": "(Required) The name of the simulation of the app.",
+                      "key": "simulation",
+                      "value": "_y3cjVVDH"
+                    }
+                  ],
+                  "hash": "app&domain&simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:35.000Z",
+              "updatedAt": "2026-07-28T10:45:35.000Z",
+              "uid": "35240-fb43f615-8ca1-4a88-b3d6-c652e3e5e132"
+            },
+            {
+              "id": "b6628c08-83d0-46ee-a0a5-31e98affd5ea",
+              "name": "ValidationException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/describeapp?app=kfwJLJA&domain=_y3cjVVDH&simulation=_y3cjVVDH#app&domain&simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeapp"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the app.",
+                      "key": "app",
+                      "value": "kfwJLJA"
+                    },
+                    {
+                      "description": "(Required) The name of the domain of the app.",
+                      "key": "domain",
+                      "value": "_y3cjVVDH"
+                    },
+                    {
+                      "description": "(Required) The name of the simulation of the app.",
+                      "key": "simulation",
+                      "value": "_y3cjVVDH"
+                    }
+                  ],
+                  "hash": "app&domain&simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:35.000Z",
+              "updatedAt": "2026-07-28T10:45:35.000Z",
+              "uid": "35240-b6628c08-83d0-46ee-a0a5-31e98affd5ea"
+            }
+          ],
+          "createdAt": "2026-07-28T10:45:35.000Z",
+          "updatedAt": "2026-07-28T10:45:35.000Z",
+          "uid": "35240-32befee3-cb80-4fb6-ba24-48f5ca180ec8"
+        }
+      ],
+      "id": "48884aef-ae15-44ff-a5e6-a417afdf2c02",
+      "createdAt": "2026-07-28T10:45:35.000Z",
+      "updatedAt": "2026-07-28T10:45:35.000Z",
+      "uid": "35240-48884aef-ae15-44ff-a5e6-a417afdf2c02"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://simspaceweaver.{{region}}.amazonaws.com"
+    }
+  ]
+}

@@ -1,0 +1,648 @@
+{
+  "info": {
+    "_postman_id": "44ff7458-9053-45c9-9c82-bb423ed589a4",
+    "name": "AWS SimSpace Weaver Createsnapshot Deleteapp#app&domain&simulation API",
+    "description": "<p>SimSpace Weaver (SimSpace Weaver) is a managed service that you can use to build and operate large-scale spatial simulations in the Amazon Web Services Cloud. For example, you can create a digital twin of a city, crowd simulations with millions of people and objects, and massively multiplayer games with hundreds of thousands of connected players. For more information about SimSpace Weaver, see the <i> <a href=\"https://docs.aws.amazon.com/simspaceweaver/latest/userguide/\">SimSpace Weaver User Guide</a> </i>.</p> <p>This API reference describes the API operations and data types that you can use to communicate directly with SimSpace Weaver.</p> <p>SimSpace Weaver also provides the SimSpace Weaver app SDK, which you use for app development. The SimSpace Weaver app SDK API reference is included in the SimSpace Weaver app SDK documentation. This documentation is part of the SimSpace Weaver app SDK distributable package.</p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:45:19.000Z",
+    "updatedAt": "2026-07-28T10:45:20.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-44ff7458-9053-45c9-9c82-bb423ed589a4"
+  },
+  "item": [
+    {
+      "name": "deleteapp#app&domain&simulation",
+      "item": [
+        {
+          "name": "Amazon Delete App",
+          "id": "0ef8b48d-ae85-402a-bc64-16a63ff15d41",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/deleteapp?app=eqd&domain=eqd&simulation=eqd#app&domain&simulation",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "deleteapp"
+              ],
+              "query": [
+                {
+                  "description": "(Required) The name of the app.",
+                  "key": "app",
+                  "value": "eqd"
+                },
+                {
+                  "description": "(Required) The name of the domain of the app.",
+                  "key": "domain",
+                  "value": "eqd"
+                },
+                {
+                  "description": "(Required) The name of the simulation of the app.",
+                  "key": "simulation",
+                  "value": "eqd"
+                }
+              ],
+              "hash": "app&domain&simulation"
+            },
+            "description": "Deletes the instance of the given custom app."
+          },
+          "response": [
+            {
+              "id": "89c3fef4-7e38-462c-9048-5070880a8802",
+              "name": "Success",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/deleteapp?app=eqd&domain=eqd&simulation=eqd#app&domain&simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "deleteapp"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the app.",
+                      "key": "app",
+                      "value": "eqd"
+                    },
+                    {
+                      "description": "(Required) The name of the domain of the app.",
+                      "key": "domain",
+                      "value": "eqd"
+                    },
+                    {
+                      "description": "(Required) The name of the simulation of the app.",
+                      "key": "simulation",
+                      "value": "eqd"
+                    }
+                  ],
+                  "hash": "app&domain&simulation"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:20.000Z",
+              "updatedAt": "2026-07-28T10:45:20.000Z",
+              "uid": "35240-89c3fef4-7e38-462c-9048-5070880a8802"
+            },
+            {
+              "id": "e8171b4a-df97-4881-9a5c-6d3830f13f00",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/deleteapp?app=eqd&domain=eqd&simulation=eqd#app&domain&simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "deleteapp"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the app.",
+                      "key": "app",
+                      "value": "eqd"
+                    },
+                    {
+                      "description": "(Required) The name of the domain of the app.",
+                      "key": "domain",
+                      "value": "eqd"
+                    },
+                    {
+                      "description": "(Required) The name of the simulation of the app.",
+                      "key": "simulation",
+                      "value": "eqd"
+                    }
+                  ],
+                  "hash": "app&domain&simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:20.000Z",
+              "updatedAt": "2026-07-28T10:45:20.000Z",
+              "uid": "35240-e8171b4a-df97-4881-9a5c-6d3830f13f00"
+            },
+            {
+              "id": "335b9e21-d02f-4f73-a02d-cc9695d087fa",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/deleteapp?app=eqd&domain=eqd&simulation=eqd#app&domain&simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "deleteapp"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the app.",
+                      "key": "app",
+                      "value": "eqd"
+                    },
+                    {
+                      "description": "(Required) The name of the domain of the app.",
+                      "key": "domain",
+                      "value": "eqd"
+                    },
+                    {
+                      "description": "(Required) The name of the simulation of the app.",
+                      "key": "simulation",
+                      "value": "eqd"
+                    }
+                  ],
+                  "hash": "app&domain&simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:20.000Z",
+              "updatedAt": "2026-07-28T10:45:20.000Z",
+              "uid": "35240-335b9e21-d02f-4f73-a02d-cc9695d087fa"
+            },
+            {
+              "id": "ab79afbc-e020-4a24-951b-fc25b44d8d95",
+              "name": "AccessDeniedException",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/deleteapp?app=eqd&domain=eqd&simulation=eqd#app&domain&simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "deleteapp"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the app.",
+                      "key": "app",
+                      "value": "eqd"
+                    },
+                    {
+                      "description": "(Required) The name of the domain of the app.",
+                      "key": "domain",
+                      "value": "eqd"
+                    },
+                    {
+                      "description": "(Required) The name of the simulation of the app.",
+                      "key": "simulation",
+                      "value": "eqd"
+                    }
+                  ],
+                  "hash": "app&domain&simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:20.000Z",
+              "updatedAt": "2026-07-28T10:45:20.000Z",
+              "uid": "35240-ab79afbc-e020-4a24-951b-fc25b44d8d95"
+            },
+            {
+              "id": "985468a4-3886-427f-aa0b-aae2772baf01",
+              "name": "ValidationException",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/deleteapp?app=eqd&domain=eqd&simulation=eqd#app&domain&simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "deleteapp"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the app.",
+                      "key": "app",
+                      "value": "eqd"
+                    },
+                    {
+                      "description": "(Required) The name of the domain of the app.",
+                      "key": "domain",
+                      "value": "eqd"
+                    },
+                    {
+                      "description": "(Required) The name of the simulation of the app.",
+                      "key": "simulation",
+                      "value": "eqd"
+                    }
+                  ],
+                  "hash": "app&domain&simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:20.000Z",
+              "updatedAt": "2026-07-28T10:45:20.000Z",
+              "uid": "35240-985468a4-3886-427f-aa0b-aae2772baf01"
+            },
+            {
+              "id": "a034ad54-0483-4c44-b4aa-fef804ba2fbe",
+              "name": "ConflictException",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/deleteapp?app=eqd&domain=eqd&simulation=eqd#app&domain&simulation",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "deleteapp"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the app.",
+                      "key": "app",
+                      "value": "eqd"
+                    },
+                    {
+                      "description": "(Required) The name of the domain of the app.",
+                      "key": "domain",
+                      "value": "eqd"
+                    },
+                    {
+                      "description": "(Required) The name of the simulation of the app.",
+                      "key": "simulation",
+                      "value": "eqd"
+                    }
+                  ],
+                  "hash": "app&domain&simulation"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:20.000Z",
+              "updatedAt": "2026-07-28T10:45:20.000Z",
+              "uid": "35240-a034ad54-0483-4c44-b4aa-fef804ba2fbe"
+            }
+          ],
+          "createdAt": "2026-07-28T10:45:20.000Z",
+          "updatedAt": "2026-07-28T10:45:20.000Z",
+          "uid": "35240-0ef8b48d-ae85-402a-bc64-16a63ff15d41"
+        }
+      ],
+      "id": "7c3abe73-4c02-4691-b87b-72470c3f4f95",
+      "createdAt": "2026-07-28T10:45:20.000Z",
+      "updatedAt": "2026-07-28T10:45:20.000Z",
+      "uid": "35240-7c3abe73-4c02-4691-b87b-72470c3f4f95"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://simspaceweaver.{{region}}.amazonaws.com"
+    }
+  ]
+}
