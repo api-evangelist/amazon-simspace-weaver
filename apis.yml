@@ -48,7 +48,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-deleteapp-app-domain-simulation-api
   name: Amazon SimSpace Weaver Deleteapp#app&domain&simulation API
   description: >-
@@ -69,7 +69,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-deletesimulation-simulation-api
   name: Amazon SimSpace Weaver Deletesimulation#simulation API
   description: >-
@@ -90,7 +90,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-describeapp-app-domain-simulation-api
   name: Amazon SimSpace Weaver Describeapp#app&domain&simulation API
   description: >-
@@ -111,7 +111,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-describesimulation-simulation-api
   name: Amazon SimSpace Weaver Describesimulation#simulation API
   description: >-
@@ -132,7 +132,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-listapps-simulation-api
   name: Amazon SimSpace Weaver Listapps#simulation API
   description: >-
@@ -153,7 +153,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-listsimulations-api
   name: Amazon SimSpace Weaver Listsimulations API
   description: >-
@@ -174,7 +174,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-startapp-api
   name: Amazon SimSpace Weaver Startapp API
   description: The Startapp API from Amazon SimSpace Weaver — 1 operation(s) for startapp.
@@ -194,7 +194,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-startclock-api
   name: Amazon SimSpace Weaver Startclock API
   description: The Startclock API from Amazon SimSpace Weaver — 1 operation(s) for startclock.
@@ -214,7 +214,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-startsimulation-api
   name: Amazon SimSpace Weaver Startsimulation API
   description: >-
@@ -235,7 +235,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-stopapp-api
   name: Amazon SimSpace Weaver Stopapp API
   description: The Stopapp API from Amazon SimSpace Weaver — 1 operation(s) for stopapp.
@@ -255,7 +255,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-stopclock-api
   name: Amazon SimSpace Weaver Stopclock API
   description: The Stopclock API from Amazon SimSpace Weaver — 1 operation(s) for stopclock.
@@ -275,7 +275,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-stopsimulation-api
   name: Amazon SimSpace Weaver Stopsimulation API
   description: The Stopsimulation API from Amazon SimSpace Weaver — 1 operation(s) for stopsimulation.
@@ -295,7 +295,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-tags-api
   name: Amazon SimSpace Weaver Tags API
   description: The Tags API from Amazon SimSpace Weaver — 2 operation(s) for tags.
@@ -315,7 +315,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simspaceweaver/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simspace-weaver.yaml
+    url: openapi/_original/amazon-simspace-weaver.yaml
 common:
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-simspace-weaver/overview
