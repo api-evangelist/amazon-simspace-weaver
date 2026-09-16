@@ -1,8 +1,8 @@
 aid: amazon-simspace-weaver
 name: Amazon SimSpace Weaver
-description: AWS SimSpace Weaver is a managed service that helps you build and run large-scale spatial simulations in the
-  AWS Cloud. It provides tools to run custom spatial simulation logic at scale and use simulation workloads for defense, urban
-  planning, and other real-world system simulations.
+description: AWS SimSpace Weaver is a managed service that helps you build and run large-scale spatial
+  simulations in the AWS Cloud. It provides tools to run custom spatial simulation logic at scale and
+  use simulation workloads for defense, urban planning, and other real-world system simulations.
 type: Index
 deliveryModel:
   model: saas
@@ -39,7 +39,7 @@ tags:
 - Spatial Simulation
 url: https://raw.githubusercontent.com/api-evangelist/amazon-simspace-weaver/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-05-19'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-createsnapshot-api
@@ -64,8 +64,8 @@ apis:
     url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-deleteapp-app-domain-simulation-api
   name: Amazon SimSpace Weaver Deleteapp#app&domain&simulation API
-  description: >-
-    The Deleteapp#app&domain&simulation API from Amazon SimSpace Weaver — 1 operation(s) for deleteapp#app&domain&simulation.
+  description: The Deleteapp#app&domain&simulation API from Amazon SimSpace Weaver — 1 operation(s) for
+    deleteapp#app&domain&simulation.
   humanURL: https://aws.amazon.com/simspace-weaver/
   baseURL: https://simspaceweaver.amazonaws.com
   tags:
@@ -85,8 +85,7 @@ apis:
     url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-deletesimulation-simulation-api
   name: Amazon SimSpace Weaver Deletesimulation#simulation API
-  description: >-
-    The Deletesimulation#simulation API from Amazon SimSpace Weaver — 1 operation(s) for deletesimulation#simulation.
+  description: The Deletesimulation#simulation API from Amazon SimSpace Weaver — 1 operation(s) for deletesimulation#simulation.
   humanURL: https://aws.amazon.com/simspace-weaver/
   baseURL: https://simspaceweaver.amazonaws.com
   tags:
@@ -106,8 +105,8 @@ apis:
     url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-describeapp-app-domain-simulation-api
   name: Amazon SimSpace Weaver Describeapp#app&domain&simulation API
-  description: >-
-    The Describeapp#app&domain&simulation API from Amazon SimSpace Weaver — 1 operation(s) for describeapp#app&domain&simulation.
+  description: The Describeapp#app&domain&simulation API from Amazon SimSpace Weaver — 1 operation(s)
+    for describeapp#app&domain&simulation.
   humanURL: https://aws.amazon.com/simspace-weaver/
   baseURL: https://simspaceweaver.amazonaws.com
   tags:
@@ -127,8 +126,8 @@ apis:
     url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-describesimulation-simulation-api
   name: Amazon SimSpace Weaver Describesimulation#simulation API
-  description: >-
-    The Describesimulation#simulation API from Amazon SimSpace Weaver — 1 operation(s) for describesimulation#simulation.
+  description: The Describesimulation#simulation API from Amazon SimSpace Weaver — 1 operation(s) for
+    describesimulation#simulation.
   humanURL: https://aws.amazon.com/simspace-weaver/
   baseURL: https://simspaceweaver.amazonaws.com
   tags:
@@ -148,8 +147,7 @@ apis:
     url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-listapps-simulation-api
   name: Amazon SimSpace Weaver Listapps#simulation API
-  description: >-
-    The Listapps#simulation API from Amazon SimSpace Weaver — 1 operation(s) for listapps#simulation.
+  description: The Listapps#simulation API from Amazon SimSpace Weaver — 1 operation(s) for listapps#simulation.
   humanURL: https://aws.amazon.com/simspace-weaver/
   baseURL: https://simspaceweaver.amazonaws.com
   tags:
@@ -169,8 +167,7 @@ apis:
     url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-listsimulations-api
   name: Amazon SimSpace Weaver Listsimulations API
-  description: >-
-    The Listsimulations API from Amazon SimSpace Weaver — 1 operation(s) for listsimulations.
+  description: The Listsimulations API from Amazon SimSpace Weaver — 1 operation(s) for listsimulations.
   humanURL: https://aws.amazon.com/simspace-weaver/
   baseURL: https://simspaceweaver.amazonaws.com
   tags:
@@ -230,8 +227,7 @@ apis:
     url: openapi/_original/amazon-simspace-weaver.yaml
 - aid: amazon-simspace-weaver:amazon-simspace-weaver-startsimulation-api
   name: Amazon SimSpace Weaver Startsimulation API
-  description: >-
-    The Startsimulation API from Amazon SimSpace Weaver — 1 operation(s) for startsimulation.
+  description: The Startsimulation API from Amazon SimSpace Weaver — 1 operation(s) for startsimulation.
   humanURL: https://aws.amazon.com/simspace-weaver/
   baseURL: https://simspaceweaver.amazonaws.com
   tags:
@@ -330,6 +326,8 @@ apis:
   - type: X-NaftikoCapability
     url: openapi/_original/amazon-simspace-weaver.yaml
 common:
+- type: Website
+  url: https://amazon.com
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-simspace-weaver/overview
 - type: AgenticAccess
