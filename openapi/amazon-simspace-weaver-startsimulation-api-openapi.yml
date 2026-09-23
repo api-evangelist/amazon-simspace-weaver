@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2022-10-28'
   x-release: v4
-  title: AWS SimSpace Weaver Createsnapshot Startsimulation API
-  description: <p>SimSpace Weaver (SimSpace Weaver) is a managed service that you can use to build and operate large-scale spatial simulations in the Amazon Web Services Cloud. For example, you can create a digital twin of a city, crowd simulations with millions of people and objects, and massively multiplayer games with hundreds of thousands of connected players. For more information about SimSpace Weaver, see the <i> <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/">SimSpace Weaver User Guide</a> </i>.</p> <p>This API reference describes the API operations and data types that you can use to communicate directly with SimSpace Weaver.</p> <p>SimSpace Weaver also provides the SimSpace Weaver app SDK, which you use for app development. The SimSpace Weaver app SDK API reference is included in the SimSpace Weaver app SDK documentation. This documentation is part of the SimSpace Weaver app SDK distributable package.</p>
+  title: AWS SimSpace Weaver Startsimulation API
+  description: SimSpace Weaver (SimSpace Weaver) is a managed service that you can use to build and operate large-scale spatial simulations in the Amazon Web Services Cloud.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/simspaceweaver-2022-10-28.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +126,7 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: StartSimulation
-      description: Starts a simulation with the given name. You must choose to start your simulation from a schema or from a snapshot. For more information about the schema, see the <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/schema-reference.html">schema reference</a> in the <i>SimSpace Weaver User Guide</i>. For more information about snapshots, see <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/working-with_snapshots.html">Snapshots</a> in the <i>SimSpace Weaver User Guide</i>.
+      description: Starts a simulation with the given name. You must choose to start your simulation from a schema or from a snapshot. For more information about the schema, see the schema reference in the SimSpace Weaver User Guide. For more information about snapshots, see Snapshots in the SimSpace Weaver User Guide.
       responses:
         '200':
           description: Success
@@ -293,26 +294,8 @@ paths:
       - Startsimulation
 components:
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -323,8 +306,26 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -336,12 +337,7 @@ components:
         type: string
       required: false
   schemas:
-    UUID:
-      type: string
-      pattern: ^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$
-      minLength: 36
-    InternalServerException: {}
-    ConflictException: {}
+    ValidationException: {}
     StartSimulationOutput:
       type: object
       properties:
@@ -357,29 +353,34 @@ components:
           allOf:
           - $ref: '#/components/schemas/UUID'
           - description: A universally unique identifier (UUID) for this simulation.
-    BucketName:
+    UUID:
       type: string
-      minLength: 3
-      maxLength: 63
-    AccessDeniedException: {}
-    ValidationException: {}
+      pattern: ^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$
+      minLength: 36
     SimSpaceWeaverArn:
       type: string
       pattern: ^arn:(?:aws|aws-cn|aws-us-gov):simspaceweaver:([a-z]{2}-[a-z]+-\d{1}):(\d{12})?:([a-z]+)\/(.+)$
       minLength: 0
       maxLength: 1600
-    ServiceQuotaExceededException: {}
-    Timestamp:
+    BucketName:
       type: string
-      format: date-time
+      minLength: 3
+      maxLength: 63
+    ConflictException: {}
     ObjectKey:
       type: string
       minLength: 1
       maxLength: 1024
+    Timestamp:
+      type: string
+      format: date-time
+    ServiceQuotaExceededException: {}
     TagValue:
       type: string
       minLength: 0
       maxLength: 256
+    AccessDeniedException: {}
+    InternalServerException: {}
   securitySchemes:
     hmac:
       type: apiKey
