@@ -224,8 +224,8 @@ paths:
       - Startclock
 components:
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -242,14 +242,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -267,13 +267,13 @@ components:
         type: string
       required: false
   schemas:
-    ValidationException: {}
+    ConflictException: {}
+    InternalServerException: {}
     StartClockOutput:
       type: object
       properties: {}
-    InternalServerException: {}
     ResourceNotFoundException: {}
-    ConflictException: {}
+    ValidationException: {}
     AccessDeniedException: {}
   securitySchemes:
     hmac:

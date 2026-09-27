@@ -2,7 +2,7 @@ openapi: 3.2.0
 info:
   version: '2022-10-28'
   x-release: v4
-  title: AWS SimSpace Weaver Listapps#simulation API
+  title: AWS SimSpace Weaver Deleteapp API
   description: SimSpace Weaver (SimSpace Weaver) is a managed service that you can use to build and operate large-scale spatial simulations in the Amazon Web Services Cloud.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -113,9 +113,9 @@ servers:
 security:
 - hmac: []
 tags:
-- name: Listapps#simulation
+- name: Delete App
 paths:
-  /listapps#simulation:
+  /deleteapp#app&domain&simulation:
     parameters:
     - $ref: '#/components/parameters/X-Amz-Content-Sha256'
     - $ref: '#/components/parameters/X-Amz-Date'
@@ -124,23 +124,21 @@ paths:
     - $ref: '#/components/parameters/X-Amz-Security-Token'
     - $ref: '#/components/parameters/X-Amz-Signature'
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
-    get:
-      operationId: ListApps
-      description: Lists all custom apps or service apps for the given simulation and domain.
+    delete:
+      operationId: DeleteApp
+      description: Deletes the instance of the given custom app.
       responses:
         '200':
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ListAppsOutput'
+                $ref: '#/components/schemas/DeleteAppOutput'
               examples:
-                ListApps200Example:
-                  summary: Default ListApps 200
+                DeleteApp200Example:
+                  summary: Default DeleteApp 200
                   x-microcks-default: true
-                  value:
-                    Apps: example-value
-                    NextToken: example-value
+                  value: {}
         '480':
           description: ResourceNotFoundException
           content:
@@ -148,8 +146,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/ResourceNotFoundException'
               examples:
-                ListApps480Example:
-                  summary: Default ListApps 480
+                DeleteApp480Example:
+                  summary: Default DeleteApp 480
                   x-microcks-default: true
                   value: example-value
         '481':
@@ -159,8 +157,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/InternalServerException'
               examples:
-                ListApps481Example:
-                  summary: Default ListApps 481
+                DeleteApp481Example:
+                  summary: Default DeleteApp 481
                   x-microcks-default: true
                   value: example-value
         '482':
@@ -170,8 +168,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/AccessDeniedException'
               examples:
-                ListApps482Example:
-                  summary: Default ListApps 482
+                DeleteApp482Example:
+                  summary: Default DeleteApp 482
                   x-microcks-default: true
                   value: example-value
         '483':
@@ -181,64 +179,59 @@ paths:
               schema:
                 $ref: '#/components/schemas/ValidationException'
               examples:
-                ListApps483Example:
-                  summary: Default ListApps 483
+                DeleteApp483Example:
+                  summary: Default DeleteApp 483
+                  x-microcks-default: true
+                  value: example-value
+        '484':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                DeleteApp484Example:
+                  summary: Default DeleteApp 484
                   x-microcks-default: true
                   value: example-value
       parameters:
-      - name: domain
+      - name: app
         in: query
-        required: false
-        description: The name of the domain that you want to list apps for.
+        required: true
+        description: The name of the app.
         schema:
           type: string
           pattern: ^[a-zA-Z0-9_.-]+$
           minLength: 1
           maxLength: 64
-      - name: maxResults
+      - name: domain
         in: query
-        required: false
-        description: The maximum number of apps to list.
-        schema:
-          type: integer
-          minimum: 1
-      - name: nextToken
-        in: query
-        required: false
-        description: If SimSpace Weaver returns <code>nextToken</code>, then there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. To retrieve the next page, call the operation again using the returned token. Keep all other arguments unchanged. If no results remain, then <code>nextToken</code> is set to <code>null</code>. Each pagination token expires after 24 hours. If you provide a token that isn't valid, then you receive an <i>HTTP 400 ValidationException</i> error.
+        required: true
+        description: The name of the domain of the app.
         schema:
           type: string
+          pattern: ^[a-zA-Z0-9_.-]+$
+          minLength: 1
+          maxLength: 64
       - name: simulation
         in: query
         required: true
-        description: The name of the simulation that you want to list apps for.
+        description: The name of the simulation of the app.
         schema:
           type: string
           pattern: ^[a-zA-Z0-9_.-]+$
           minLength: 1
           maxLength: 64
-      - name: MaxResults
-        in: query
-        schema:
-          type: string
-        description: Pagination limit
-        required: false
-      - name: NextToken
-        in: query
-        schema:
-          type: string
-        description: Pagination token
-        required: false
-      summary: Amazon List Apps
+      summary: Amazon Delete App
       x-microcks-operation:
         delay: 0
         dispatcher: FALLBACK
       tags:
-      - Listapps#simulation
+      - Delete App
 components:
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -249,14 +242,20 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -273,83 +272,15 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    ValidationException: {}
-    ResourceNotFoundException: {}
-    SimSpaceWeaverLongResourceName:
-      type: string
-      pattern: ^[a-zA-Z0-9_.-]+$
-      minLength: 1
-      maxLength: 256
-    SimulationAppStatus:
-      type: string
-      enum:
-      - STARTING
-      - STARTED
-      - STOPPING
-      - STOPPED
-      - ERROR
-      - UNKNOWN
-    SimulationAppList:
-      type: array
-      items:
-        $ref: '#/components/schemas/SimulationAppMetadata'
-    ListAppsOutput:
-      type: object
-      properties:
-        Apps:
-          allOf:
-          - $ref: '#/components/schemas/SimulationAppList'
-          - description: The list of apps for the given simulation and domain.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/OptionalString'
-          - description: If SimSpace Weaver returns <code>nextToken</code>, then there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. To retrieve the next page, call the operation again using the returned token. Keep all other arguments unchanged. If no results remain, then <code>nextToken</code> is set to <code>null</code>. Each pagination token expires after 24 hours. If you provide a token that isn't valid, then you receive an <i>HTTP 400 ValidationException</i> error.
-    SimSpaceWeaverResourceName:
-      type: string
-      pattern: ^[a-zA-Z0-9_.-]+$
-      minLength: 1
-      maxLength: 64
-    SimulationAppMetadata:
-      type: object
-      properties:
-        Domain:
-          allOf:
-          - $ref: '#/components/schemas/SimSpaceWeaverResourceName'
-          - description: 'The domain of the app. For more information about domains, see <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is_key-concepts.html#what-is_key-concepts_domains">Key concepts: Domains</a> in the <i>SimSpace Weaver User Guide</i>.'
-        Name:
-          allOf:
-          - $ref: '#/components/schemas/SimSpaceWeaverLongResourceName'
-          - description: The name of the app.
-        Simulation:
-          allOf:
-          - $ref: '#/components/schemas/SimSpaceWeaverResourceName'
-          - description: The name of the simulation of the app.
-        Status:
-          allOf:
-          - $ref: '#/components/schemas/SimulationAppStatus'
-          - description: The current status of the app.
-        TargetStatus:
-          allOf:
-          - $ref: '#/components/schemas/SimulationAppTargetStatus'
-          - description: The desired status of the app.
-      description: A collection of metadata about the app.
-    OptionalString:
-      type: string
-    SimulationAppTargetStatus:
-      type: string
-      enum:
-      - UNKNOWN
-      - STARTED
-      - STOPPED
-    AccessDeniedException: {}
+    ConflictException: {}
     InternalServerException: {}
+    ResourceNotFoundException: {}
+    ValidationException: {}
+    AccessDeniedException: {}
+    DeleteAppOutput:
+      type: object
+      properties: {}
   securitySchemes:
     hmac:
       type: apiKey

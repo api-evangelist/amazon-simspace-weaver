@@ -267,12 +267,23 @@ paths:
       - Startapp
 components:
   schemas:
+    SimSpaceWeaverResourceName:
+      type: string
+      pattern: ^[a-zA-Z0-9_.-]+$
+      minLength: 1
+      maxLength: 64
+    ConflictException: {}
+    NonEmptyString:
+      type: string
+      minLength: 1
+      maxLength: 1600
+    InternalServerException: {}
+    ValidationException: {}
     LaunchCommandList:
       type: array
       items:
         $ref: '#/components/schemas/NonEmptyString'
-    ValidationException: {}
-    InternalServerException: {}
+    AccessDeniedException: {}
     StartAppOutput:
       type: object
       properties:
@@ -288,21 +299,10 @@ components:
           allOf:
           - $ref: '#/components/schemas/SimSpaceWeaverResourceName'
           - description: The name of the simulation of the app.
-    ConflictException: {}
     ServiceQuotaExceededException: {}
-    SimSpaceWeaverResourceName:
-      type: string
-      pattern: ^[a-zA-Z0-9_.-]+$
-      minLength: 1
-      maxLength: 64
-    NonEmptyString:
-      type: string
-      minLength: 1
-      maxLength: 1600
-    AccessDeniedException: {}
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -319,14 +319,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string

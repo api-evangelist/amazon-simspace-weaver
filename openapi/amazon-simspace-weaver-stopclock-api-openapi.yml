@@ -224,8 +224,8 @@ paths:
       - Stopclock
 components:
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -242,14 +242,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -267,14 +267,14 @@ components:
         type: string
       required: false
   schemas:
+    ConflictException: {}
+    InternalServerException: {}
+    ResourceNotFoundException: {}
+    ValidationException: {}
+    AccessDeniedException: {}
     StopClockOutput:
       type: object
       properties: {}
-    ValidationException: {}
-    InternalServerException: {}
-    ResourceNotFoundException: {}
-    ConflictException: {}
-    AccessDeniedException: {}
   securitySchemes:
     hmac:
       type: apiKey

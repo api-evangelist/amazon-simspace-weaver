@@ -2,7 +2,7 @@ openapi: 3.2.0
 info:
   version: '2022-10-28'
   x-release: v4
-  title: AWS SimSpace Weaver Deletesimulation#simulation API
+  title: AWS SimSpace Weaver Deletesimulation API
   description: SimSpace Weaver (SimSpace Weaver) is a managed service that you can use to build and operate large-scale spatial simulations in the Amazon Web Services Cloud.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -113,7 +113,7 @@ servers:
 security:
 - hmac: []
 tags:
-- name: Deletesimulation#simulation
+- name: Deletesimulation
 paths:
   /deletesimulation#simulation:
     parameters:
@@ -212,11 +212,11 @@ paths:
         delay: 0
         dispatcher: FALLBACK
       tags:
-      - Deletesimulation#simulation
+      - Deletesimulation
 components:
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -233,14 +233,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -258,14 +258,14 @@ components:
         type: string
       required: false
   schemas:
-    ValidationException: {}
+    ConflictException: {}
     InternalServerException: {}
     ResourceNotFoundException: {}
-    ConflictException: {}
+    ValidationException: {}
+    AccessDeniedException: {}
     DeleteSimulationOutput:
       type: object
       properties: {}
-    AccessDeniedException: {}
   securitySchemes:
     hmac:
       type: apiKey

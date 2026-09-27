@@ -337,15 +337,40 @@ paths:
       tags:
       - Tags
 components:
+  schemas:
+    UntagResourceOutput:
+      type: object
+      properties: {}
+    TagMap:
+      type: object
+      minProperties: 1
+      maxProperties: 50
+      additionalProperties:
+        $ref: '#/components/schemas/TagValue'
+    TagResourceOutput:
+      type: object
+      properties: {}
+    TagValue:
+      type: string
+      minLength: 0
+      maxLength: 256
+    ResourceNotFoundException: {}
+    TagKey:
+      type: string
+      minLength: 1
+      maxLength: 128
+    TooManyTagsException: {}
+    ListTagsForResourceOutput:
+      type: object
+      properties:
+        Tags:
+          allOf:
+          - $ref: '#/components/schemas/TagMap'
+          - description: The list of tags for the resource.
+    ValidationException: {}
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -356,14 +381,20 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
       required: false
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -380,37 +411,6 @@ components:
       schema:
         type: string
       required: false
-  schemas:
-    ValidationException: {}
-    UntagResourceOutput:
-      type: object
-      properties: {}
-    ListTagsForResourceOutput:
-      type: object
-      properties:
-        Tags:
-          allOf:
-          - $ref: '#/components/schemas/TagMap'
-          - description: The list of tags for the resource.
-    TooManyTagsException: {}
-    ResourceNotFoundException: {}
-    TagValue:
-      type: string
-      minLength: 0
-      maxLength: 256
-    TagKey:
-      type: string
-      minLength: 1
-      maxLength: 128
-    TagMap:
-      type: object
-      minProperties: 1
-      maxProperties: 50
-      additionalProperties:
-        $ref: '#/components/schemas/TagValue'
-    TagResourceOutput:
-      type: object
-      properties: {}
   securitySchemes:
     hmac:
       type: apiKey
