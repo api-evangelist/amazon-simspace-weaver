@@ -237,25 +237,47 @@ paths:
       - List Apps
 components:
   schemas:
-    SimSpaceWeaverResourceName:
-      type: string
-      pattern: ^[a-zA-Z0-9_.-]+$
-      minLength: 1
-      maxLength: 64
-    InternalServerException: {}
-    OptionalString:
-      type: string
-    ValidationException: {}
     SimulationAppTargetStatus:
       type: string
       enum:
       - UNKNOWN
       - STARTED
       - STOPPED
+    OptionalString:
+      type: string
+    SimulationAppStatus:
+      type: string
+      enum:
+      - STARTING
+      - STARTED
+      - STOPPING
+      - STOPPED
+      - ERROR
+      - UNKNOWN
+    ValidationException: {}
+    SimSpaceWeaverResourceName:
+      type: string
+      pattern: ^[a-zA-Z0-9_.-]+$
+      minLength: 1
+      maxLength: 64
     SimulationAppList:
       type: array
       items:
         $ref: '#/components/schemas/SimulationAppMetadata'
+    AccessDeniedException: {}
+    InternalServerException: {}
+    ResourceNotFoundException: {}
+    ListAppsOutput:
+      type: object
+      properties:
+        Apps:
+          allOf:
+          - $ref: '#/components/schemas/SimulationAppList'
+          - description: The list of apps for the given simulation and domain.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/OptionalString'
+          - description: If SimSpace Weaver returns <code>nextToken</code>, then there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. To retrieve the next page, call the operation again using the returned token. Keep all other arguments unchanged. If no results remain, then <code>nextToken</code> is set to <code>null</code>. Each pagination token expires after 24 hours. If you provide a token that isn't valid, then you receive an <i>HTTP 400 ValidationException</i> error.
     SimulationAppMetadata:
       type: object
       properties:
@@ -280,36 +302,14 @@ components:
           - $ref: '#/components/schemas/SimulationAppTargetStatus'
           - description: The desired status of the app.
       description: A collection of metadata about the app.
-    ListAppsOutput:
-      type: object
-      properties:
-        Apps:
-          allOf:
-          - $ref: '#/components/schemas/SimulationAppList'
-          - description: The list of apps for the given simulation and domain.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/OptionalString'
-          - description: If SimSpace Weaver returns <code>nextToken</code>, then there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. To retrieve the next page, call the operation again using the returned token. Keep all other arguments unchanged. If no results remain, then <code>nextToken</code> is set to <code>null</code>. Each pagination token expires after 24 hours. If you provide a token that isn't valid, then you receive an <i>HTTP 400 ValidationException</i> error.
     SimSpaceWeaverLongResourceName:
       type: string
       pattern: ^[a-zA-Z0-9_.-]+$
       minLength: 1
       maxLength: 256
-    ResourceNotFoundException: {}
-    AccessDeniedException: {}
-    SimulationAppStatus:
-      type: string
-      enum:
-      - STARTING
-      - STARTED
-      - STOPPING
-      - STOPPED
-      - ERROR
-      - UNKNOWN
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -320,8 +320,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -332,14 +338,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

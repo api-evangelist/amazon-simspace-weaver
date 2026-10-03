@@ -228,87 +228,12 @@ paths:
       - Describe App
 components:
   schemas:
-    SimSpaceWeaverResourceName:
-      type: string
-      pattern: ^[a-zA-Z0-9_.-]+$
-      minLength: 1
-      maxLength: 64
-    AppPortMappings:
-      type: array
-      items:
-        $ref: '#/components/schemas/SimulationAppPortMapping'
-    InternalServerException: {}
-    ValidationException: {}
     SimulationAppTargetStatus:
       type: string
       enum:
       - UNKNOWN
       - STARTED
       - STOPPED
-    PortNumber:
-      type: integer
-      minimum: 0
-      maximum: 65535
-    Description:
-      type: string
-      minLength: 0
-      maxLength: 500
-    LaunchOverrides:
-      type: object
-      properties:
-        LaunchCommands:
-          allOf:
-          - $ref: '#/components/schemas/LaunchCommandList'
-          - description: App launch commands and command line parameters that override the launch command configured in the simulation schema.
-      description: Options that apply when the app starts. These options override default behavior.
-    SimulationAppPortMapping:
-      type: object
-      properties:
-        Actual:
-          allOf:
-          - $ref: '#/components/schemas/PortNumber'
-          - description: The TCP/UDP port number of the running app. SimSpace Weaver dynamically assigns this port number when the app starts. SimSpace Weaver maps the <code>Declared</code> port to the <code>Actual</code> port. Clients connect to the app using the app's IP address and the <code>Actual</code> port number.
-        Declared:
-          allOf:
-          - $ref: '#/components/schemas/PortNumber'
-          - description: The TCP/UDP port number of the app, declared in the simulation schema. SimSpace Weaver maps the <code>Declared</code> port to the <code>Actual</code> port. The source code for the app should bind to the <code>Declared</code> port.
-      description: A collection of TCP/UDP ports for a custom or service app.
-    SimSpaceWeaverLongResourceName:
-      type: string
-      pattern: ^[a-zA-Z0-9_.-]+$
-      minLength: 1
-      maxLength: 256
-    SimulationAppEndpointInfo:
-      type: object
-      properties:
-        Address:
-          allOf:
-          - $ref: '#/components/schemas/NonEmptyString'
-          - description: The IP address of the app. SimSpace Weaver dynamically assigns this IP address when the app starts.
-        IngressPortMappings:
-          allOf:
-          - $ref: '#/components/schemas/AppPortMappings'
-          - description: The inbound TCP/UDP port numbers of the app. The combination of an IP address and a port number form a network endpoint.
-      description: 'Information about the network endpoint that you can use to connect to your custom or service app. For more information about SimSpace Weaver apps, see <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is_key-concepts.html#what-is_key-concepts_apps">Key concepts: Apps</a> in the <i>SimSpace Weaver User Guide</i>..'
-    NonEmptyString:
-      type: string
-      minLength: 1
-      maxLength: 1600
-    ResourceNotFoundException: {}
-    LaunchCommandList:
-      type: array
-      items:
-        $ref: '#/components/schemas/NonEmptyString'
-    AccessDeniedException: {}
-    SimulationAppStatus:
-      type: string
-      enum:
-      - STARTING
-      - STARTED
-      - STOPPING
-      - STOPPED
-      - ERROR
-      - UNKNOWN
     DescribeAppOutput:
       type: object
       properties:
@@ -342,9 +267,84 @@ components:
           allOf:
           - $ref: '#/components/schemas/SimulationAppTargetStatus'
           - description: The desired lifecycle state of the custom app.
+    SimSpaceWeaverLongResourceName:
+      type: string
+      pattern: ^[a-zA-Z0-9_.-]+$
+      minLength: 1
+      maxLength: 256
+    LaunchCommandList:
+      type: array
+      items:
+        $ref: '#/components/schemas/NonEmptyString'
+    LaunchOverrides:
+      type: object
+      properties:
+        LaunchCommands:
+          allOf:
+          - $ref: '#/components/schemas/LaunchCommandList'
+          - description: App launch commands and command line parameters that override the launch command configured in the simulation schema.
+      description: Options that apply when the app starts. These options override default behavior.
+    SimulationAppStatus:
+      type: string
+      enum:
+      - STARTING
+      - STARTED
+      - STOPPING
+      - STOPPED
+      - ERROR
+      - UNKNOWN
+    ValidationException: {}
+    SimSpaceWeaverResourceName:
+      type: string
+      pattern: ^[a-zA-Z0-9_.-]+$
+      minLength: 1
+      maxLength: 64
+    AppPortMappings:
+      type: array
+      items:
+        $ref: '#/components/schemas/SimulationAppPortMapping'
+    NonEmptyString:
+      type: string
+      minLength: 1
+      maxLength: 1600
+    AccessDeniedException: {}
+    InternalServerException: {}
+    PortNumber:
+      type: integer
+      minimum: 0
+      maximum: 65535
+    SimulationAppPortMapping:
+      type: object
+      properties:
+        Actual:
+          allOf:
+          - $ref: '#/components/schemas/PortNumber'
+          - description: The TCP/UDP port number of the running app. SimSpace Weaver dynamically assigns this port number when the app starts. SimSpace Weaver maps the <code>Declared</code> port to the <code>Actual</code> port. Clients connect to the app using the app's IP address and the <code>Actual</code> port number.
+        Declared:
+          allOf:
+          - $ref: '#/components/schemas/PortNumber'
+          - description: The TCP/UDP port number of the app, declared in the simulation schema. SimSpace Weaver maps the <code>Declared</code> port to the <code>Actual</code> port. The source code for the app should bind to the <code>Declared</code> port.
+      description: A collection of TCP/UDP ports for a custom or service app.
+    ResourceNotFoundException: {}
+    SimulationAppEndpointInfo:
+      type: object
+      properties:
+        Address:
+          allOf:
+          - $ref: '#/components/schemas/NonEmptyString'
+          - description: The IP address of the app. SimSpace Weaver dynamically assigns this IP address when the app starts.
+        IngressPortMappings:
+          allOf:
+          - $ref: '#/components/schemas/AppPortMappings'
+          - description: The inbound TCP/UDP port numbers of the app. The combination of an IP address and a port number form a network endpoint.
+      description: 'Information about the network endpoint that you can use to connect to your custom or service app. For more information about SimSpace Weaver apps, see <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is_key-concepts.html#what-is_key-concepts_apps">Key concepts: Apps</a> in the <i>SimSpace Weaver User Guide</i>..'
+    Description:
+      type: string
+      minLength: 0
+      maxLength: 500
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -355,8 +355,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -367,14 +373,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
