@@ -293,27 +293,54 @@ paths:
       tags:
       - Startsimulation
 components:
+  schemas:
+    TagValue:
+      type: string
+      minLength: 0
+      maxLength: 256
+    ConflictException: {}
+    ServiceQuotaExceededException: {}
+    UUID:
+      type: string
+      pattern: ^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$
+      minLength: 36
+    InternalServerException: {}
+    ValidationException: {}
+    BucketName:
+      type: string
+      minLength: 3
+      maxLength: 63
+    SimSpaceWeaverArn:
+      type: string
+      pattern: ^arn:(?:aws|aws-cn|aws-us-gov):simspaceweaver:([a-z]{2}-[a-z]+-\d{1}):(\d{12})?:([a-z]+)\/(.+)$
+      minLength: 0
+      maxLength: 1600
+    AccessDeniedException: {}
+    Timestamp:
+      type: string
+      format: date-time
+    ObjectKey:
+      type: string
+      minLength: 1
+      maxLength: 1024
+    StartSimulationOutput:
+      type: object
+      properties:
+        Arn:
+          allOf:
+          - $ref: '#/components/schemas/SimSpaceWeaverArn'
+          - description: The Amazon Resource Name (ARN) of the simulation. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.
+        CreationTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time when the simulation was created, expressed as the number of seconds and milliseconds in UTC since the Unix epoch (0:0:0.000, January 1, 1970).
+        ExecutionId:
+          allOf:
+          - $ref: '#/components/schemas/UUID'
+          - description: A universally unique identifier (UUID) for this simulation.
   parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -330,57 +357,30 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
       in: header
       schema:
         type: string
       required: false
-  schemas:
-    SimSpaceWeaverArn:
-      type: string
-      pattern: ^arn:(?:aws|aws-cn|aws-us-gov):simspaceweaver:([a-z]{2}-[a-z]+-\d{1}):(\d{12})?:([a-z]+)\/(.+)$
-      minLength: 0
-      maxLength: 1600
-    UUID:
-      type: string
-      pattern: ^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$
-      minLength: 36
-    ValidationException: {}
-    ObjectKey:
-      type: string
-      minLength: 1
-      maxLength: 1024
-    TagValue:
-      type: string
-      minLength: 0
-      maxLength: 256
-    AccessDeniedException: {}
-    InternalServerException: {}
-    BucketName:
-      type: string
-      minLength: 3
-      maxLength: 63
-    Timestamp:
-      type: string
-      format: date-time
-    StartSimulationOutput:
-      type: object
-      properties:
-        Arn:
-          allOf:
-          - $ref: '#/components/schemas/SimSpaceWeaverArn'
-          - description: The Amazon Resource Name (ARN) of the simulation. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.
-        CreationTime:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: The time when the simulation was created, expressed as the number of seconds and milliseconds in UTC since the Unix epoch (0:0:0.000, January 1, 1970).
-        ExecutionId:
-          allOf:
-          - $ref: '#/components/schemas/UUID'
-          - description: A universally unique identifier (UUID) for this simulation.
-    ServiceQuotaExceededException: {}
-    ConflictException: {}
   securitySchemes:
     hmac:
       type: apiKey

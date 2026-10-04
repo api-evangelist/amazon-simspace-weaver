@@ -217,7 +217,71 @@ paths:
       tags:
       - Describesimulation
 components:
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
+    TimeToLiveString:
+      type: string
+      pattern: ^\d{1,5}[mhdMHD]$
+      minLength: 2
+      maxLength: 6
+    SimulationTargetStatus:
+      type: string
+      enum:
+      - UNKNOWN
+      - STARTED
+      - STOPPED
+      - DELETED
+    Description:
+      type: string
+      minLength: 0
+      maxLength: 500
+    UUID:
+      type: string
+      pattern: ^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$
+      minLength: 36
+    InternalServerException: {}
     SimulationClock:
       type: object
       properties:
@@ -230,19 +294,18 @@ components:
           - $ref: '#/components/schemas/ClockTargetStatus'
           - description: The desired status of the simulation clock.
       description: Status information about the simulation clock.
-    CloudWatchLogsLogGroup:
+    LiveSimulationState:
       type: object
       properties:
-        LogGroupArn:
+        Clocks:
           allOf:
-          - $ref: '#/components/schemas/LogGroupArn'
-          - description: The Amazon Resource Name (ARN) of the Amazon CloudWatch Logs log group for the simulation. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. For more information about log groups, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html">Working with log groups and log streams</a> in the <i>Amazon CloudWatch Logs User Guide</i>.
-      description: The Amazon CloudWatch Logs log group for the simulation. For more information about log groups, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html">Working with log groups and log streams</a> in the <i>Amazon CloudWatch Logs User Guide</i>.
-    TimeToLiveString:
-      type: string
-      pattern: ^\d{1,5}[mhdMHD]$
-      minLength: 2
-      maxLength: 6
+          - $ref: '#/components/schemas/SimulationClockList'
+          - description: <p>A list of simulation clocks.</p> <note> <p>At this time, a simulation has only one clock.</p> </note>
+        Domains:
+          allOf:
+          - $ref: '#/components/schemas/DomainList'
+          - description: 'A list of domains for the simulation. For more information about domains, see <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is_key-concepts.html#what-is_key-concepts_domains">Key concepts: Domains</a> in the <i>SimSpace Weaver User Guide</i>.'
+      description: A collection of additional state information, such as domain and clock configuration.
     Domain:
       type: object
       properties:
@@ -255,15 +318,11 @@ components:
           - $ref: '#/components/schemas/SimSpaceWeaverResourceName'
           - description: The name of the domain.
       description: '<p>A collection of app instances that run the same executable app code and have the same launch options and commands.</p> <p>For more information about domains, see <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is_key-concepts.html#what-is_key-concepts_domains">Key concepts: Domains</a> in the <i>SimSpace Weaver User Guide</i>.</p>'
-    SimulationTargetStatus:
+    ValidationException: {}
+    BucketName:
       type: string
-      enum:
-      - UNKNOWN
-      - STARTED
-      - STOPPED
-      - DELETED
-    OptionalString:
-      type: string
+      minLength: 3
+      maxLength: 63
     LogDestination:
       type: object
       properties:
@@ -272,21 +331,25 @@ components:
           - $ref: '#/components/schemas/CloudWatchLogsLogGroup'
           - description: An Amazon CloudWatch Logs log group that stores simulation log data. For more information about log groups, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html">Working with log groups and log streams</a> in the <i>Amazon CloudWatch Logs User Guide</i>.
       description: The location where SimSpace Weaver sends simulation log data.
-    RoleArn:
-      type: string
-      pattern: ^arn:(?:aws|aws-cn|aws-us-gov):iam::(\d{12})?:role\/(.+)$
-      minLength: 0
-      maxLength: 1600
+    ResourceNotFoundException: {}
     SimSpaceWeaverArn:
       type: string
       pattern: ^arn:(?:aws|aws-cn|aws-us-gov):simspaceweaver:([a-z]{2}-[a-z]+-\d{1}):(\d{12})?:([a-z]+)\/(.+)$
       minLength: 0
       maxLength: 1600
-    UUID:
+    SimSpaceWeaverResourceName:
       type: string
-      pattern: ^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$
-      minLength: 36
-    ValidationException: {}
+      pattern: ^[a-zA-Z0-9_.-]+$
+      minLength: 1
+      maxLength: 64
+    CloudWatchLogsLogGroup:
+      type: object
+      properties:
+        LogGroupArn:
+          allOf:
+          - $ref: '#/components/schemas/LogGroupArn'
+          - description: The Amazon Resource Name (ARN) of the Amazon CloudWatch Logs log group for the simulation. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. For more information about log groups, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html">Working with log groups and log streams</a> in the <i>Amazon CloudWatch Logs User Guide</i>.
+      description: The Amazon CloudWatch Logs log group for the simulation. For more information about log groups, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html">Working with log groups and log streams</a> in the <i>Amazon CloudWatch Logs User Guide</i>.
     DescribeSimulationOutput:
       type: object
       properties:
@@ -349,33 +412,18 @@ components:
           allOf:
           - $ref: '#/components/schemas/SimulationTargetStatus'
           - description: The desired lifecycle state of the simulation.
-    ObjectKey:
+    ClockTargetStatus:
       type: string
-      minLength: 1
-      maxLength: 1024
-    SimSpaceWeaverResourceName:
-      type: string
-      pattern: ^[a-zA-Z0-9_.-]+$
-      minLength: 1
-      maxLength: 64
+      enum:
+      - UNKNOWN
+      - STARTED
+      - STOPPED
     LogGroupArn:
       type: string
       pattern: ^arn:(?:aws|aws-cn|aws-us-gov):log-group:([a-z]{2}-[a-z]+-\d{1}):(\d{12})?:role\/(.+)$
       minLength: 0
       maxLength: 1600
-    LiveSimulationState:
-      type: object
-      properties:
-        Clocks:
-          allOf:
-          - $ref: '#/components/schemas/SimulationClockList'
-          - description: <p>A list of simulation clocks.</p> <note> <p>At this time, a simulation has only one clock.</p> </note>
-        Domains:
-          allOf:
-          - $ref: '#/components/schemas/DomainList'
-          - description: 'A list of domains for the simulation. For more information about domains, see <a href="https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is_key-concepts.html#what-is_key-concepts_domains">Key concepts: Domains</a> in the <i>SimSpace Weaver User Guide</i>.'
-      description: A collection of additional state information, such as domain and clock configuration.
-    SimulationStatus:
+    ClockStatus:
       type: string
       enum:
       - UNKNOWN
@@ -383,23 +431,33 @@ components:
       - STARTED
       - STOPPING
       - STOPPED
-      - FAILED
-      - DELETING
-      - DELETED
-      - SNAPSHOT_IN_PROGRESS
-    AccessDeniedException: {}
-    InternalServerException: {}
-    BucketName:
-      type: string
-      minLength: 3
-      maxLength: 63
+    LogDestinations:
+      type: array
+      items:
+        $ref: '#/components/schemas/LogDestination'
     SimulationClockList:
       type: array
       items:
         $ref: '#/components/schemas/SimulationClock'
+    AccessDeniedException: {}
+    LifecycleManagementStrategy:
+      type: string
+      enum:
+      - Unknown
+      - PerWorker
+      - BySpatialSubdivision
+      - ByRequest
     Timestamp:
       type: string
       format: date-time
+    ObjectKey:
+      type: string
+      minLength: 1
+      maxLength: 1024
+    DomainList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Domain'
     S3Location:
       type: object
       properties:
@@ -412,11 +470,18 @@ components:
           - $ref: '#/components/schemas/ObjectKey'
           - description: The key name of an object in Amazon S3. For more information about Amazon S3 objects and object keys, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/uploading-downloading-objects.html">Uploading, downloading, and working with objects in Amazon S3</a> in the <i>Amazon Simple Storage Service User Guide</i>.
       description: A location in Amazon Simple Storage Service (Amazon S3) where SimSpace Weaver stores simulation data, such as your app .zip files and schema file. For more information about Amazon S3, see the <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"> <i>Amazon Simple Storage Service User Guide</i> </a>.
-    ResourceNotFoundException: {}
-    DomainList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Domain'
+    SimulationStatus:
+      type: string
+      enum:
+      - UNKNOWN
+      - STARTING
+      - STARTED
+      - STOPPING
+      - STOPPED
+      - FAILED
+      - DELETING
+      - DELETED
+      - SNAPSHOT_IN_PROGRESS
     LoggingConfiguration:
       type: object
       properties:
@@ -425,78 +490,13 @@ components:
           - $ref: '#/components/schemas/LogDestinations'
           - description: A list of the locations where SimSpace Weaver sends simulation log data.
       description: The logging configuration for a simulation.
-    ClockStatus:
+    RoleArn:
       type: string
-      enum:
-      - UNKNOWN
-      - STARTING
-      - STARTED
-      - STOPPING
-      - STOPPED
-    ClockTargetStatus:
-      type: string
-      enum:
-      - UNKNOWN
-      - STARTED
-      - STOPPED
-    LogDestinations:
-      type: array
-      items:
-        $ref: '#/components/schemas/LogDestination'
-    LifecycleManagementStrategy:
-      type: string
-      enum:
-      - Unknown
-      - PerWorker
-      - BySpatialSubdivision
-      - ByRequest
-    Description:
-      type: string
+      pattern: ^arn:(?:aws|aws-cn|aws-us-gov):iam::(\d{12})?:role\/(.+)$
       minLength: 0
-      maxLength: 500
-  parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
+      maxLength: 1600
+    OptionalString:
+      type: string
   securitySchemes:
     hmac:
       type: apiKey

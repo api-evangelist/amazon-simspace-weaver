@@ -226,15 +226,6 @@ paths:
       tags:
       - Stopsimulation
 components:
-  schemas:
-    StopSimulationOutput:
-      type: object
-      properties: {}
-    ConflictException: {}
-    AccessDeniedException: {}
-    InternalServerException: {}
-    ValidationException: {}
-    ResourceNotFoundException: {}
   parameters:
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
@@ -248,14 +239,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -272,12 +257,27 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    StopSimulationOutput:
+      type: object
+      properties: {}
+    ValidationException: {}
+    ConflictException: {}
+    ResourceNotFoundException: {}
+    AccessDeniedException: {}
+    InternalServerException: {}
   securitySchemes:
     hmac:
       type: apiKey
