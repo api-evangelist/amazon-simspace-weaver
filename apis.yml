@@ -328,6 +328,12 @@ apis:
   - type: X-NaftikoCapability
     url: openapi/_original/amazon-simspace-weaver.yaml
 common:
+- type: Plans
+  url: plans/amazon-simspace-weaver-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/amazon-simspace-weaver-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-simspace-weaver-finops.yml
 - type: Website
   url: https://amazon.com
 - type: PostmanWorkspace
