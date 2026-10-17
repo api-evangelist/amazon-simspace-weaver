@@ -266,54 +266,9 @@ paths:
       tags:
       - Startapp
 components:
-  parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    LaunchCommandList:
-      type: array
-      items:
-        $ref: '#/components/schemas/NonEmptyString'
+    ValidationException: {}
+    ConflictException: {}
     StartAppOutput:
       type: object
       properties:
@@ -329,8 +284,12 @@ components:
           allOf:
           - $ref: '#/components/schemas/SimSpaceWeaverResourceName'
           - description: The name of the simulation of the app.
-    ValidationException: {}
-    ConflictException: {}
+    InternalServerException: {}
+    LaunchCommandList:
+      type: array
+      items:
+        $ref: '#/components/schemas/NonEmptyString'
+    ServiceQuotaExceededException: {}
     NonEmptyString:
       type: string
       minLength: 1
@@ -340,9 +299,50 @@ components:
       pattern: ^[a-zA-Z0-9_.-]+$
       minLength: 1
       maxLength: 64
-    ServiceQuotaExceededException: {}
     AccessDeniedException: {}
-    InternalServerException: {}
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey
