@@ -1,4 +1,4 @@
-# Amazon SimSpace Weaver (amazon-simspace-weaver)
+# Amazon SimSpace Weaver
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,126 +64,238 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Amazon SimSpace Weaver is a managed service that lets you build, deploy, and run large-scale spatial simulations in the AWS Cloud.
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-**URL:** [https://aws.amazon.com/simspaceweaver/](https://aws.amazon.com/simspaceweaver/)
+AWS SimSpace Weaver is a managed service that helps you build and run large-scale spatial simulations in the AWS Cloud. It provides tools to run custom spatial simulation logic at scale and use simulation workloads for defense, urban planning, and other real-world system simulations.
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+**Areas:** AWS · Defense · Digital Twin · Simulation · Spatial Simulation · Defunct
 
-## Tags:
+## Amazon SimSpace Weaver on APIs.io (historical record)
 
- - AWS, Simulation, Cloud Computing, Spatial Computing
+Everything profiled for Amazon SimSpace Weaver is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-simspace-weaver/](https://apis.io/providers/amazon-simspace-weaver/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (14)
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+- [Amazon SimSpace Weaver Createsnapshot API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-createsnapshot-api/) — The Createsnapshot API from Amazon SimSpace Weaver — 1 operation(s) for createsnapshot.
+- [Amazon SimSpace Weaver Listsimulations API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-listsimulations-api/) — The Listsimulations API from Amazon SimSpace Weaver — 1 operation(s) for listsimulations.
+- [Amazon SimSpace Weaver Startapp API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-startapp-api/) — The Startapp API from Amazon SimSpace Weaver — 1 operation(s) for startapp.
+- [Amazon SimSpace Weaver Startclock API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-startclock-api/) — The Startclock API from Amazon SimSpace Weaver — 1 operation(s) for startclock.
+- [Amazon SimSpace Weaver Startsimulation API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-startsimulation-api/) — The Startsimulation API from Amazon SimSpace Weaver — 1 operation(s) for startsimulation.
+- [Amazon SimSpace Weaver Stopapp API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-stopapp-api/) — The Stopapp API from Amazon SimSpace Weaver — 1 operation(s) for stopapp.
+- [Amazon SimSpace Weaver Stopclock API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-stopclock-api/) — The Stopclock API from Amazon SimSpace Weaver — 1 operation(s) for stopclock.
+- [Amazon SimSpace Weaver Stopsimulation API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-stopsimulation-api/) — The Stopsimulation API from Amazon SimSpace Weaver — 1 operation(s) for stopsimulation.
+- [Amazon SimSpace Weaver Tags API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-tags-api/) — The Tags API from Amazon SimSpace Weaver — 2 operation(s) for tags.
+- [Amazon SimSpace Weaver Deletesimulation API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-deletesimulation-api/) — The Deletesimulation API from Amazon SimSpace Weaver — 1 operation(s) for deletesimulation.
+- [Amazon SimSpace Weaver Describesimulation API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-describesimulation-api/) — The Describesimulation API from Amazon SimSpace Weaver — 1 operation(s) for describesimulation.
+- [Amazon SimSpace Weaver Delete App API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-delete-app-api/) — The Delete App API from Amazon SimSpace Weaver — 1 operation(s) for delete app.
+- [Amazon SimSpace Weaver Describe App API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-describe-app-api/) — The Describe App API from Amazon SimSpace Weaver — 1 operation(s) for describe app.
+- [Amazon SimSpace Weaver List Apps API](https://apis.io/apis/amazon-simspace-weaver/amazon-simspace-weaver-list-apps-api/) — The List Apps API from Amazon SimSpace Weaver — 1 operation(s) for list apps.
 
-## APIs
+### Published properties
 
-### Amazon SimSpace Weaver API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Amazon SimSpace Weaver is a managed service that lets you build, deploy, and run large-scale spatial simulations in the AWS Cloud.
+#### Agentic access (1)
 
-**Human URL:** [https://aws.amazon.com/simspaceweaver/](https://aws.amazon.com/simspaceweaver/)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags:
+- [Amazon Simspace Weaver Agentic Access](https://apis.io/agentic-access/amazon-simspace-weaver/amazon-simspace-weaver-agentic-access/)
 
- - Simulation, Cloud Computing
+#### JSON Schema (53)
 
-#### Properties
+The data models the API reads and writes.
 
+- [ClockStatus](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-clock-status/)
+- [ClockTargetStatus](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-clock-target-status/)
+- [CloudWatchLogsLogGroup](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-cloud-watch-logs-log-group/)
+- [CreateSnapshotInput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-create-snapshot-input/)
+- [CreateSnapshotOutput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-create-snapshot-output/)
+- [DeleteAppInput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-delete-app-input/)
+- [DeleteAppOutput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-delete-app-output/)
+- [DeleteSimulationInput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-delete-simulation-input/)
+- [DeleteSimulationOutput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-delete-simulation-output/)
+- [DescribeAppInput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-describe-app-input/)
+- [DescribeAppOutput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-describe-app-output/)
+- [DescribeSimulationInput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-describe-simulation-input/)
+- [DescribeSimulationOutput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-describe-simulation-output/)
+- [Domain](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-domain/)
+- [LaunchOverrides](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-launch-overrides/)
+- [LifecycleManagementStrategy](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-lifecycle-management-strategy/)
+- [ListAppsInput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-list-apps-input/)
+- [ListAppsOutput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-list-apps-output/)
+- [ListSimulationsInput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-list-simulations-input/)
+- [ListSimulationsOutput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-list-simulations-output/)
+- [ListTagsForResourceInput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-list-tags-for-resource-input/)
+- [ListTagsForResourceOutput](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-list-tags-for-resource-output/)
+- [LiveSimulationState](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-live-simulation-state/)
+- [LogDestination](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-log-destination/)
+- [LoggingConfiguration](https://apis.io/schemas/amazon-simspace-weaver/amazon-simspace-weaver-logging-configuration/)
+- …and 28 more published on APIs.io
+
+#### JSON Structure (53)
+
+Data models expressed in JSON Structure.
+
+- [Amazon Simspace Weaver Clock Status Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-clock-status-structure/)
+- [Amazon Simspace Weaver Clock Target Status Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-clock-target-status-structure/)
+- [Amazon Simspace Weaver Cloud Watch Logs Log Group Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-cloud-watch-logs-log-group-structure/)
+- [Amazon Simspace Weaver Create Snapshot Input Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-create-snapshot-input-structure/)
+- [Amazon Simspace Weaver Create Snapshot Output Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-create-snapshot-output-structure/)
+- [Amazon Simspace Weaver Delete App Input Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-delete-app-input-structure/)
+- [Amazon Simspace Weaver Delete App Output Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-delete-app-output-structure/)
+- [Amazon Simspace Weaver Delete Simulation Input Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-delete-simulation-input-structure/)
+- [Amazon Simspace Weaver Delete Simulation Output Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-delete-simulation-output-structure/)
+- [Amazon Simspace Weaver Describe App Input Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-describe-app-input-structure/)
+- [Amazon Simspace Weaver Describe App Output Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-describe-app-output-structure/)
+- [Amazon Simspace Weaver Describe Simulation Input Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-describe-simulation-input-structure/)
+- [Amazon Simspace Weaver Describe Simulation Output Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-describe-simulation-output-structure/)
+- [Amazon Simspace Weaver Domain Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-domain-structure/)
+- [Amazon Simspace Weaver Launch Overrides Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-launch-overrides-structure/)
+- [Amazon Simspace Weaver Lifecycle Management Strategy Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-lifecycle-management-strategy-structure/)
+- [Amazon Simspace Weaver List Apps Input Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-list-apps-input-structure/)
+- [Amazon Simspace Weaver List Apps Output Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-list-apps-output-structure/)
+- [Amazon Simspace Weaver List Simulations Input Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-list-simulations-input-structure/)
+- [Amazon Simspace Weaver List Simulations Output Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-list-simulations-output-structure/)
+- [Amazon Simspace Weaver List Tags For Resource Input Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-list-tags-for-resource-input-structure/)
+- [Amazon Simspace Weaver List Tags For Resource Output Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-list-tags-for-resource-output-structure/)
+- [Amazon Simspace Weaver Live Simulation State Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-live-simulation-state-structure/)
+- [Amazon Simspace Weaver Log Destination Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-log-destination-structure/)
+- [Amazon Simspace Weaver Logging Configuration Structure](https://apis.io/json-structure/amazon-simspace-weaver/amazon-simspace-weaver-logging-configuration-structure/)
+- …and 28 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Simspace Weaver Context](https://apis.io/jsonld/amazon-simspace-weaver/amazon-simspace-weaver-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Simspace Weaver Vocabulary](https://apis.io/vocabularies/amazon-simspace-weaver/amazon-simspace-weaver-vocabulary/)
+
+#### Examples (46)
+
+Example requests and responses.
+
+- [Amazon Simspace Weaver Cloud Watch Logs Log Group Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-cloud-watch-logs-log-group-example/)
+- [Amazon Simspace Weaver Create Snapshot Input Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-create-snapshot-input-example/)
+- [Amazon Simspace Weaver Create Snapshot Output Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-create-snapshot-output-example/)
+- [Amazon Simspace Weaver Delete App Input Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-delete-app-input-example/)
+- [Amazon Simspace Weaver Delete App Output Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-delete-app-output-example/)
+- [Amazon Simspace Weaver Delete Simulation Input Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-delete-simulation-input-example/)
+- [Amazon Simspace Weaver Delete Simulation Output Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-delete-simulation-output-example/)
+- [Amazon Simspace Weaver Describe App Input Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-describe-app-input-example/)
+- [Amazon Simspace Weaver Describe App Output Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-describe-app-output-example/)
+- [Amazon Simspace Weaver Describe Simulation Input Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-describe-simulation-input-example/)
+- [Amazon Simspace Weaver Describe Simulation Output Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-describe-simulation-output-example/)
+- [Amazon Simspace Weaver Domain Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-domain-example/)
+- [Amazon Simspace Weaver Launch Overrides Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-launch-overrides-example/)
+- [Amazon Simspace Weaver List Apps Input Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-list-apps-input-example/)
+- [Amazon Simspace Weaver List Apps Output Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-list-apps-output-example/)
+- [Amazon Simspace Weaver List Simulations Input Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-list-simulations-input-example/)
+- [Amazon Simspace Weaver List Simulations Output Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-list-simulations-output-example/)
+- [Amazon Simspace Weaver List Tags For Resource Input Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-list-tags-for-resource-input-example/)
+- [Amazon Simspace Weaver List Tags For Resource Output Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-list-tags-for-resource-output-example/)
+- [Amazon Simspace Weaver Live Simulation State Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-live-simulation-state-example/)
+- [Amazon Simspace Weaver Log Destination Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-log-destination-example/)
+- [Amazon Simspace Weaver Logging Configuration Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-logging-configuration-example/)
+- [Amazon Simspace Weaver S3 Destination Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-s3-destination-example/)
+- [Amazon Simspace Weaver S3 Location Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-s3-location-example/)
+- [Amazon Simspace Weaver Simulation App Endpoint Info Example](https://apis.io/examples/amazon-simspace-weaver/amazon-simspace-weaver-simulation-app-endpoint-info-example/)
+- …and 21 more published on APIs.io
+
+#### Collections (28)
+
+Postman and Open Collection request collections.
+
+- [AWS SimSpace Weaver Createsnapshot API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-createsnapshot-api/)
+- [AWS SimSpace Weaver Createsnapshot Deleteapp#app&domain&simulation API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-deleteapp-app-domain-simulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Deletesimulation#simulation API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-deletesimulation-simulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Describeapp#app&domain&simulation API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-describeapp-app-domain-simulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Describesimulation#simulation API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-describesimulation-simulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Listapps#simulation API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-listapps-simulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Listsimulations API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-listsimulations-api/)
+- [AWS SimSpace Weaver Createsnapshot Startapp API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-startapp-api/)
+- [AWS SimSpace Weaver Createsnapshot Startclock API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-startclock-api/)
+- [AWS SimSpace Weaver Createsnapshot Startsimulation API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-startsimulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Stopapp API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-stopapp-api/)
+- [AWS SimSpace Weaver Createsnapshot Stopclock API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-stopclock-api/)
+- [AWS SimSpace Weaver Createsnapshot Stopsimulation API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-stopsimulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Tags API](https://apis.io/collections/amazon-simspace-weaver/open-amazon-simspace-weaver-tags-api/)
+- [AWS SimSpace Weaver Createsnapshot API](https://apis.io/collections/amazon-simspace-weaver/postman-amazon-simspace-weaver-createsnapshot-api/)
+- [AWS SimSpace Weaver Createsnapshot Deleteapp#app&domain&simulation API](https://apis.io/collections/amazon-simspace-weaver/postman-amazon-simspace-weaver-deleteapp-app-domain-simulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Deletesimulation#simulation API](https://apis.io/collections/amazon-simspace-weaver/postman-amazon-simspace-weaver-deletesimulation-simulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Describeapp#app&domain&simulation API](https://apis.io/collections/amazon-simspace-weaver/postman-amazon-simspace-weaver-describeapp-app-domain-simulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Describesimulation#simulation API](https://apis.io/collections/amazon-simspace-weaver/postman-amazon-simspace-weaver-describesimulation-simulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Listapps#simulation API](https://apis.io/collections/amazon-simspace-weaver/postman-amazon-simspace-weaver-listapps-simulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Listsimulations API](https://apis.io/collections/amazon-simspace-weaver/postman-amazon-simspace-weaver-listsimulations-api/)
+- [AWS SimSpace Weaver Createsnapshot Startapp API](https://apis.io/collections/amazon-simspace-weaver/postman-amazon-simspace-weaver-startapp-api/)
+- [AWS SimSpace Weaver Createsnapshot Startclock API](https://apis.io/collections/amazon-simspace-weaver/postman-amazon-simspace-weaver-startclock-api/)
+- [AWS SimSpace Weaver Createsnapshot Startsimulation API](https://apis.io/collections/amazon-simspace-weaver/postman-amazon-simspace-weaver-startsimulation-api/)
+- [AWS SimSpace Weaver Createsnapshot Stopapp API](https://apis.io/collections/amazon-simspace-weaver/postman-amazon-simspace-weaver-stopapp-api/)
+- …and 3 more published on APIs.io
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon SimSpace Weaver — jsonschema rules](https://apis.io/rules/amazon-simspace-weaver/amazon-simspace-weaver-jsonschema-spectral-rules/)
+- [Amazon SimSpace Weaver API Rules](https://apis.io/rules/amazon-simspace-weaver/amazon-simspace-weaver-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Simspace Weaver Authentication](https://apis.io/security/amazon-simspace-weaver/amazon-simspace-weaver-authentication/)
+- [Amazon Simspace Weaver Domain Security](https://apis.io/security/amazon-simspace-weaver/amazon-simspace-weaver-domain-security/)
+- [Amazon Simspace Weaver Trust Center](https://apis.io/security/amazon-simspace-weaver/amazon-simspace-weaver-trust-center/)
+- [Amazon Simspace Weaver Vulnerability Disclosure](https://apis.io/security/amazon-simspace-weaver/amazon-simspace-weaver-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Simspace Weaver Plans Pricing](https://apis.io/plans/amazon-simspace-weaver/amazon-simspace-weaver-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Simspace Weaver Rate Limits](https://apis.io/rate-limits/amazon-simspace-weaver/amazon-simspace-weaver-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Simspace Weaver Finops](https://apis.io/finops/amazon-simspace-weaver/amazon-simspace-weaver-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://amazon.com)
 - [Documentation](https://docs.aws.amazon.com/simspaceweaver/latest/userguide/what-is.html)
-- [OpenAPI](openapi/amazon-simspace-weaver.yaml)
-- [GettingStarted](https://aws.amazon.com/simspaceweaver/)
-- [Pricing](https://aws.amazon.com/simspaceweaver/pricing/)
+- [Support](https://aws.amazon.com/premiumsupport/)
+- [Blog](https://aws.amazon.com/blogs/hpc/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Common Properties
+## API Evangelist rating
 
-- [Portal](https://aws.amazon.com/simspaceweaver/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
-- [GitHubOrganization](https://github.com/aws)
-- [StatusPage](https://health.aws.amazon.com/health/status)
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
 
-## Features
+## How this profile is made
 
-| Name | Description |
-|------|-------------|
-| Large-scale Simulations | Run spatial simulations at city or country scale with millions of agents. |
-| Managed Infrastructure | Fully managed compute infrastructure for simulation workloads. |
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-## Use Cases
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon SimSpace Weaver: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-| Name | Description |
-|------|-------------|
-| Urban Planning | Simulate traffic, pedestrian movement, and city infrastructure at scale. |
-| Emergency Response | Model disaster scenarios and evacuation plans. |
+## Open an issue
 
-## Integrations
-
-| Name | Description |
-|------|-------------|
-| Amazon S3 | Store simulation schemas and output data in S3. |
-| Amazon CloudWatch | Monitor simulation metrics and logs via CloudWatch. |
-
-## Artifacts
-
-Machine-readable API specifications organized by format.
-
-### OpenAPI
-
-- [amazon-simspace-weaver.yaml](openapi/amazon-simspace-weaver.yaml)
-
-### JSON Schema
-
-- [amazon-simspace-weaver-clock-status-schema.json](json-schema/amazon-simspace-weaver-clock-status-schema.json)
-- [amazon-simspace-weaver-clock-target-status-schema.json](json-schema/amazon-simspace-weaver-clock-target-status-schema.json)
-- [amazon-simspace-weaver-cloud-watch-logs-log-group-schema.json](json-schema/amazon-simspace-weaver-cloud-watch-logs-log-group-schema.json)
-- [amazon-simspace-weaver-create-snapshot-input-schema.json](json-schema/amazon-simspace-weaver-create-snapshot-input-schema.json)
-- [amazon-simspace-weaver-create-snapshot-output-schema.json](json-schema/amazon-simspace-weaver-create-snapshot-output-schema.json)
-- ... and 48 more
-
-### JSON Structure
-
-- [amazon-simspace-weaver-clock-status-structure.json](json-structure/amazon-simspace-weaver-clock-status-structure.json)
-- [amazon-simspace-weaver-clock-target-status-structure.json](json-structure/amazon-simspace-weaver-clock-target-status-structure.json)
-- [amazon-simspace-weaver-cloud-watch-logs-log-group-structure.json](json-structure/amazon-simspace-weaver-cloud-watch-logs-log-group-structure.json)
-- [amazon-simspace-weaver-create-snapshot-input-structure.json](json-structure/amazon-simspace-weaver-create-snapshot-input-structure.json)
-- [amazon-simspace-weaver-create-snapshot-output-structure.json](json-structure/amazon-simspace-weaver-create-snapshot-output-structure.json)
-- ... and 48 more
-
-### JSON-LD
-
-- [amazon-simspace-weaver-context.jsonld](json-ld/amazon-simspace-weaver-context.jsonld)
-
-### Examples
-
-- [amazon-simspace-weaver-clock-status-example.json](examples/amazon-simspace-weaver-clock-status-example.json)
-- [amazon-simspace-weaver-clock-target-status-example.json](examples/amazon-simspace-weaver-clock-target-status-example.json)
-- [amazon-simspace-weaver-cloud-watch-logs-log-group-example.json](examples/amazon-simspace-weaver-cloud-watch-logs-log-group-example.json)
-- [amazon-simspace-weaver-create-snapshot-input-example.json](examples/amazon-simspace-weaver-create-snapshot-input-example.json)
-- [amazon-simspace-weaver-create-snapshot-output-example.json](examples/amazon-simspace-weaver-create-snapshot-output-example.json)
-- ... and 48 more
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions.
-
-### Shared Per-API Definitions
-
-- [amazon-simspace-weaver.yaml](capabilities/shared/amazon-simspace-weaver.yaml) — Amazon SimSpace Weaver operations for resource management
-
-## Vocabulary
-
-- [Amazon SimSpace Weaver Vocabulary](vocabulary/amazon-simspace-weaver-vocabulary.yaml) — Unified taxonomy mapping resources, actions, workflows, and personas
-
-## Rules
-
-- [Amazon SimSpace Weaver Spectral Rules](rules/amazon-simspace-weaver-spectral-rules.yml) — Rules enforcing Amazon SimSpace Weaver API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-simspace-weaver/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
