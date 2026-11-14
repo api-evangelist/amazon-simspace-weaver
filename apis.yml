@@ -31,7 +31,7 @@ accessModel:
   - plans
   - authentication
   - security
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-simspace-weaver.png
 tags:
@@ -414,6 +414,16 @@ common:
     description: Monitor simulation metrics and logs via CloudWatch.
 - type: Integrations
   url: https://aws.amazon.com/marketplace
+- type: UsageTerms
+  url: terms/amazon-simspace-weaver-terms-of-service.yml
+- type: DataProcessing
+  url: privacy/amazon-simspace-weaver-privacy-policy.yml
+- type: Attestations
+  url: compliance/amazon-simspace-weaver-compliance.yml
+- type: Eligibility
+  url: eligibility/amazon-simspace-weaver-eligibility.yml
+- type: AIPreferences
+  url: ai-preferences/amazon-simspace-weaver-ai-preferences.yml
 integrations:
 - name: Sign in
 - name: Agent Mode

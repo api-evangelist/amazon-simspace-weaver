@@ -5,9 +5,18 @@ artifacts:
   agentic-access/amazon-simspace-weaver-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-simspace-weaver-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
   authentication/amazon-simspace-weaver-authentication.yml:
     method: derived
     evidence: declared in the artifact
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-simspace-weaver-createsnapshot-api.opencollection.json:
     method: derived
     evidence: openapi/amazon-simspace-weaver-createsnapshot-api
@@ -92,6 +101,12 @@ artifacts:
   collections/amazon-simspace-weaver-tags-api.postman_collection.json:
     method: derived
     evidence: openapi/amazon-simspace-weaver-tags-api
+  compliance/amazon-simspace-weaver-compliance.yml:
+    method: harvested
+    evidence: declared in the artifact
+  eligibility/amazon-simspace-weaver-eligibility.yml:
+    method: harvested
+    evidence: declared in the artifact
   examples/amazon-simspace-weaver-clock-status-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -587,7 +602,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -648,6 +663,9 @@ artifacts:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-11-02T082323.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   openapi/_original/amazon-simspace-weaver.yaml:
@@ -741,6 +759,9 @@ artifacts:
   postman/amazon-simspace-weaver-tags-api.postman_collection.json:
     method: derived
     evidence: openapi/amazon-simspace-weaver-tags-api
+  privacy/amazon-simspace-weaver-privacy-policy.yml:
+    method: harvested
+    evidence: declared in the artifact
   rate-limits/amazon-simspace-weaver-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
@@ -761,6 +782,9 @@ artifacts:
     evidence: declared in the artifact
   sla/amazon-simspace-weaver-sla.yml:
     method: generated
+    evidence: declared in the artifact
+  terms/amazon-simspace-weaver-terms-of-service.yml:
+    method: harvested
     evidence: declared in the artifact
   vocabulary/amazon-simspace-weaver-vocabulary.yaml:
     method: unknown
