@@ -780,9 +780,6 @@ artifacts:
   security/amazon-simspace-weaver-vulnerability-disclosure.yml:
     method: searched
     evidence: declared in the artifact
-  sla/amazon-simspace-weaver-sla.yml:
-    method: generated
-    evidence: declared in the artifact
   terms/amazon-simspace-weaver-terms-of-service.yml:
     method: harvested
     evidence: declared in the artifact
